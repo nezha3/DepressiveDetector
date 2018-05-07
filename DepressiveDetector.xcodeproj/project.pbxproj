@@ -12,10 +12,11 @@
 		17771DBE20A0244C00F46855 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DBD20A0244C00F46855 /* MasterViewController.swift */; };
 		17771DC020A0244C00F46855 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DBF20A0244C00F46855 /* DetailViewController.swift */; };
 		17771DC320A0244C00F46855 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17771DC120A0244C00F46855 /* Main.storyboard */; };
-		17771DC520A0244E00F46855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17771DC420A0244E00F46855 /* Assets.xcassets */; };
 		17771DC820A0244E00F46855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17771DC620A0244E00F46855 /* LaunchScreen.storyboard */; };
 		17771DD320A0244E00F46855 /* DepressiveDetectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DD220A0244E00F46855 /* DepressiveDetectorTests.swift */; };
 		17771DDE20A0244E00F46855 /* DepressiveDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DDD20A0244E00F46855 /* DepressiveDetectorUITests.swift */; };
+		17771DEC20A027FD00F46855 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17771DEB20A027FD00F46855 /* Media.xcassets */; };
+		17A35B2020A0546F00532940 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A35B1F20A0546F00532940 /* ChildViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		17771DBD20A0244C00F46855 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		17771DBF20A0244C00F46855 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		17771DC220A0244C00F46855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		17771DC420A0244E00F46855 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17771DC720A0244E00F46855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17771DC920A0244E00F46855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17771DCE20A0244E00F46855 /* DepressiveDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepressiveDetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +51,8 @@
 		17771DD920A0244E00F46855 /* DepressiveDetectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepressiveDetectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17771DDD20A0244E00F46855 /* DepressiveDetectorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepressiveDetectorUITests.swift; sourceTree = "<group>"; };
 		17771DDF20A0244E00F46855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17771DEB20A027FD00F46855 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		17A35B1F20A0546F00532940 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +107,11 @@
 				17771DBD20A0244C00F46855 /* MasterViewController.swift */,
 				17771DBF20A0244C00F46855 /* DetailViewController.swift */,
 				17771DC120A0244C00F46855 /* Main.storyboard */,
-				17771DC420A0244E00F46855 /* Assets.xcassets */,
 				17771DC620A0244E00F46855 /* LaunchScreen.storyboard */,
 				17771DC920A0244E00F46855 /* Info.plist */,
 				17771DBA20A0244C00F46855 /* DepressiveDetector.xcdatamodeld */,
+				17771DEB20A027FD00F46855 /* Media.xcassets */,
+				17A35B1F20A0546F00532940 /* ChildViewController.swift */,
 			);
 			path = DepressiveDetector;
 			sourceTree = "<group>";
@@ -236,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17771DC820A0244E00F46855 /* LaunchScreen.storyboard in Resources */,
-				17771DC520A0244E00F46855 /* Assets.xcassets in Resources */,
+				17771DEC20A027FD00F46855 /* Media.xcassets in Resources */,
 				17771DC320A0244C00F46855 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17771DB920A0244C00F46855 /* AppDelegate.swift in Sources */,
+				17A35B2020A0546F00532940 /* ChildViewController.swift in Sources */,
 				17771DBC20A0244C00F46855 /* DepressiveDetector.xcdatamodeld in Sources */,
 				17771DBE20A0244C00F46855 /* MasterViewController.swift in Sources */,
 				17771DC020A0244C00F46855 /* DetailViewController.swift in Sources */,

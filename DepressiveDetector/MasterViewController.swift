@@ -55,6 +55,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
+        
+        //Go to Child Detail scene
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
+        self.present(newViewController, animated: true, completion: nil)
     }
 
     // MARK: - Segues
@@ -70,6 +75,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             }
         }
     }
+    
 
     // MARK: - Table View
 
