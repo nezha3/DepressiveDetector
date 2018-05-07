@@ -40,6 +40,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     @objc
     func insertNewObject(_ sender: Any) {
+        //Go to Child Detail scene
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
+        self.present(newViewController, animated: true, completion: nil)
+        
         let context = self.fetchedResultsController.managedObjectContext
         let newEvent = Event(context: context)
              
@@ -55,11 +60,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
-        
-        //Go to Child Detail scene
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
-        self.present(newViewController, animated: true, completion: nil)
     }
 
     // MARK: - Segues
