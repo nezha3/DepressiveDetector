@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ChildViewController: UIViewController {
 
@@ -18,10 +19,12 @@ class ChildViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        childName.isHidden = true
+        twitterAccount.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,20 +40,39 @@ class ChildViewController: UIViewController {
             button.setTitle("Confirm", for: .normal)
             cancelBtn.setTitle("Cancel", for: .normal)
             
-            childName.isEnabled = true //enable label
+            childName.isHidden = false //enable label
             childName.text = name.text
             name.isHidden = true //disable textfield
             
-            twitterAccount.isEnabled = true //enable label
+            twitterAccount.isHidden = false //enable label
             twitterAccount.text = twitter.text
             twitter.isHidden = true //disable textfield
             
              //continue on image selector
-            
+            ////////////////////////////////////
             
         } else {
             //store information
-            /////////////////////////
+            //save new child data into database
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let entity = NSEntityDescription.entity(forEntityName: "Child", in: context)
+            let newChild = NSManagedObject(entity: entity!, insertInto: context)
+            newChild.setValue(name.text, forKey: "name")
+            newChild.setValue(twitter.text, forKey: "twitterAccount")
+            //add save information for image
+            ///////////////////////////////////////
+            
+        
+            // Save the context.
+            do {
+                try context.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
             
             //restore all elements
             button.setTitle("Add New Child", for: .normal)
@@ -64,12 +86,14 @@ class ChildViewController: UIViewController {
             twitterAccount.isHidden = true
             twitterAccount.text = ""
             //continue on image selector
+            ////////////////////////////////////
             
             //go back
-            //pass value to masterviewcontroller
             self.dismiss(animated: true, completion: nil)
         }
     }
+    
+    
     
     //Cancel inputs on textfields
     //Disable cancel button and two UILabel

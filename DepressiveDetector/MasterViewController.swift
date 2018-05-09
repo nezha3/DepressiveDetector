@@ -13,11 +13,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
-    
-    //Give cell title and subtitle
-    //let child: [String] = ["child1","child2","child3","child4","child5"]
-    //let twitter:[String] = ["twitter1","twitter2","twitter3","twitter4","twitter5"]
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,26 +43,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "ChildViewController") as! ChildViewController
         self.present(newViewController, animated: true, completion: nil)
-        
-        let context = self.fetchedResultsController.managedObjectContext
-        
-        //Set up new tuple in SQL Table Child
-        let newChild = Child(context: context)
-        
-        //Set attributes in tuple
-        newChild.name = "child"
-        newChild.twitterAccount = "twitter"
-        
-
-        // Save the context.
-        do {
-            try context.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
     }
 
     // MARK: - Segues

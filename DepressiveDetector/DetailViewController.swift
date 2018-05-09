@@ -34,6 +34,8 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //Attribute from class in coredata
+    //Current Child in that row of table view
     var currentChild: Child? {
         didSet {
             // Update the view.
