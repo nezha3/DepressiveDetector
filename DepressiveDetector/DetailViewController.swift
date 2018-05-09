@@ -7,20 +7,20 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-
+    
+    @IBOutlet weak var childName: UILabel!
+    
     func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                //label.text = detail.timestamp!.description
-                label.text = detail.name
+        // Update the user interface for items.
+        if let child = currentChild {
+            if let label = childName {
+                label.text = child.name
             }
         }
+        //add more details for items
     }
 
     override func viewDidLoad() {
@@ -34,13 +34,12 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: Child? {
+    var currentChild: Child? {
         didSet {
             // Update the view.
             configureView()
         }
     }
-
 
 }
 

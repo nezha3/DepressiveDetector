@@ -103,6 +103,7 @@
 		17771DB720A0244C00F46855 /* DepressiveDetector */ = {
 			isa = PBXGroup;
 			children = (
+				17771DBA20A0244C00F46855 /* DepressiveDetector.xcdatamodeld */,
 				17771DB820A0244C00F46855 /* AppDelegate.swift */,
 				17771DBD20A0244C00F46855 /* MasterViewController.swift */,
 				17771DBF20A0244C00F46855 /* DetailViewController.swift */,
@@ -110,7 +111,6 @@
 				17771DC120A0244C00F46855 /* Main.storyboard */,
 				17771DC620A0244E00F46855 /* LaunchScreen.storyboard */,
 				17771DC920A0244E00F46855 /* Info.plist */,
-				17771DBA20A0244C00F46855 /* DepressiveDetector.xcdatamodeld */,
 				17771DEB20A027FD00F46855 /* Media.xcassets */,
 			);
 			path = DepressiveDetector;

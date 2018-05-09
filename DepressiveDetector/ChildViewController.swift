@@ -75,7 +75,7 @@ class ChildViewController: UIViewController {
     //Disable cancel button and two UILabel
     @IBAction func cancelAction(_ sender: Any) {
         if cancelBtn.currentTitle == "Go Back" {
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil) //go back without any passing data
         } else {
             button.setTitle("Add New Child", for: .normal)
             cancelBtn.setTitle("Go Back", for: .normal)
