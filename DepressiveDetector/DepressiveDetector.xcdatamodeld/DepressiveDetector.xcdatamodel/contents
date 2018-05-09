@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Child" representedClassName="Child" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="twitterAccount" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -19,8 +17,8 @@
         <attribute name="risk" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Child" positionX="261" positionY="198" width="128" height="75"/>
         <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
-        <element name="Child" positionX="261" positionY="198" width="128" height="105"/>
         <element name="Risk" positionX="270" positionY="234" width="128" height="105"/>
     </elements>
 </model>
