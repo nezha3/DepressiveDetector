@@ -4,12 +4,6 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="twitterAccount" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Event" representedClassName="Event" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date">
-            <userInfo/>
-        </attribute>
-        <userInfo/>
-    </entity>
     <entity name="Risk" representedClassName="Risk" syncable="YES" codeGenerationType="class">
         <attribute name="accessID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="childID" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -18,7 +12,6 @@
     </entity>
     <elements>
         <element name="Child" positionX="261" positionY="198" width="128" height="75"/>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
         <element name="Risk" positionX="270" positionY="234" width="128" height="105"/>
     </elements>
 </model>

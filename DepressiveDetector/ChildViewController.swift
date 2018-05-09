@@ -66,7 +66,8 @@ class ChildViewController: UIViewController {
             //continue on image selector
             
             //go back
-            //////////////////////////
+            //pass value to masterviewcontroller
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

@@ -50,12 +50,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.present(newViewController, animated: true, completion: nil)
         
         let context = self.fetchedResultsController.managedObjectContext
-        //let newEvent = Event(context: context)
+        
         //Set up new tuple in SQL Table Child
         let newChild = Child(context: context)
-             
-        // If appropriate, configure the new managed object.
-        //newEvent.timestamp = Date()
+        
         //Set attributes in tuple
         newChild.name = "child"
         newChild.twitterAccount = "twitter"
@@ -102,7 +100,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let child = fetchedResultsController.object(at: indexPath)
     
-        //configure cell func
+        //Configure a cell
         configureCell(cell, withEvent: child)
         
         return cell
@@ -130,7 +128,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
     func configureCell(_ cell: UITableViewCell, withEvent child: Child) {
-        //cell.textLabel!.text = event.timestamp!.description
         //Set cell title and subtitle
         cell.textLabel?.text = child.name
         cell.detailTextLabel?.text = child.twitterAccount
