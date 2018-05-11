@@ -18,6 +18,9 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
     @IBOutlet weak var childImage: UIImageView!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
+    @IBOutlet weak var correct1: UIImageView!
+    @IBOutlet weak var correct2: UIImageView!
+    @IBOutlet weak var message: UILabel!
     
     //Init instance of UIImagePickController
     let imagePicker = UIImagePickerController()
@@ -40,6 +43,16 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
     //To store all information about new child and display them
     //Show confirm button and cancel button
     @IBAction func addNewChild(_ sender: Any) {
+        if self.name.text == "" || self.twitter.text == "" {
+            self.message.text = "Please recheck inputs"
+            return
+        } else {
+            //clear up all messages
+            self.message.text = nil
+            self.correct1.image = nil
+            self.correct2.image = nil
+        }
+        
         if button.currentTitle == "Add New Child" {
             button.setTitle("Confirm", for: .normal)
             cancelBtn.setTitle("Cancel", for: .normal)
@@ -121,6 +134,30 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             //continue on image selector
         }
     }
+    
+    //Autocorrection on input on textField "name"
+    @IBAction func textChanged1(_ sender: Any) {
+        if let text = name.text {
+            if text != ""{
+                self.correct1.image = #imageLiteral(resourceName: "correct")
+            } else {
+                self.correct1.image = nil
+            }
+        }
+    }
+    
+    //Autocorrection on input on textField "twitter"
+    @IBAction func textChange2(_ sender: Any) {
+        if let text = twitter.text {
+            if text != ""{
+                self.correct2.image = #imageLiteral(resourceName: "correct")
+            } else {
+                self.correct2.image = nil
+            }
+        }
+    }
+    
+    
     
     //Popover photo library to select a photo for child
     @IBAction func selectChildPhoto(_ sender: Any) {
