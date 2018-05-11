@@ -78,9 +78,15 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             newChild.setValue(name.text, forKey: "name")
             newChild.setValue(twitter.text, forKey: "twitterAccount")
             //add save information for image
-            ///////////////////////////////////////
-            
+            if childImage.image != nil {
+                saveImageforChild(image: childImage.image!)
+                 //NSLog("having Child Image") //only for testing
+            } else{
+                //add codes for save nil image metadata in database
+                 //NSLog("no Child Image") //only for testing
+            }
         
+
             // Save the context.
             do {
                 try context.save()
@@ -110,7 +116,19 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
     }
     
-    
+    //Save Child image
+    func saveImageforChild(image: UIImage){
+        let fileName = "child1" //need to specified name for image
+        let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        let fileURL = DocumentDirURL.appendingPathComponent("imageforChild").appendingPathComponent(fileName).appendingPathExtension("png")
+        
+        let data = UIImagePNGRepresentation(image)
+        do {
+            try data?.write(to: fileURL)
+        } catch {
+             NSLog("failed with error: \(error)")
+        }
+    }
     
     //Cancel inputs on textfields
     //Disable cancel button and two UILabel

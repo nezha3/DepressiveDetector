@@ -29,15 +29,40 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //create image directory
+        createDirectory(directory: "imageforChild")
+        
+        //set up navigation bar in table view
         navigationItem.leftBarButtonItem = editButtonItem
-
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
         navigationItem.rightBarButtonItem = addButton
         if let split = splitViewController {
             let controllers = split.viewControllers
             detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+    }
+    
+    //Func: create directory
+    func createDirectory(directory : String) {
+        let fileManager = FileManager.default
+        if let tDocumentDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let filePath =  tDocumentDirectory.appendingPathComponent("\(directory)")
+            if !fileManager.fileExists(atPath: filePath.path) {
+                do {
+                    try fileManager.createDirectory(atPath: filePath.path, withIntermediateDirectories: true, attributes: nil)
+                } catch {
+                    NSLog("Couldn't create document directory")
+                }
+            }
+            NSLog("Document directory is \(directory)")
+        }
+    }
+    
+    //Get child image from local directory "imageforChild"
+    func getImage(ImageName: String) -> UIImage? {
+        let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+        let fileURL = DocumentDirURL.appendingPathComponent("imageforChild").appendingPathComponent(ImageName).appendingPathExtension("png")
+        return UIImage(contentsOfFile: fileURL.path)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -122,6 +147,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         //Set cell title and subtitle
         cell.textLabel?.text = child.name
         cell.detailTextLabel?.text = child.twitterAccount
+        cell.imageView!.image = getImage(ImageName: "child1") //need to change imge name to specified
     }
 
     // MARK: - Fetched results controller
