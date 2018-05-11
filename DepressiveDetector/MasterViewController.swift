@@ -9,6 +9,19 @@
 import UIKit
 import CoreData
 
+//Set random color for CGFloat
+extension CGFloat {
+    static var random: CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+//Set random UIColor
+extension UIColor {
+    static var random: UIColor {
+        return UIColor(red: .random, green: .random, blue: .random, alpha: 0.5)
+    }
+}
+
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
@@ -74,12 +87,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let child = fetchedResultsController.object(at: indexPath)
+        //Configure cell background
+        cell.backgroundColor = UIColor.random
     
         //Configure a cell
         configureCell(cell, withEvent: child)
         
         return cell
     }
+
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.

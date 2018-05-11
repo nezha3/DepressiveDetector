@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class ChildViewController: UIViewController {
+class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var twitter: UITextField!
@@ -19,9 +19,13 @@ class ChildViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var cancelBtn: UIButton!
     
+    //Init instance of UIImagePickController
+    let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagePicker.delegate = self
 
         childName.isHidden = true
         twitterAccount.isHidden = true
@@ -117,6 +121,29 @@ class ChildViewController: UIViewController {
             //continue on image selector
         }
     }
+    
+    //Popover photo library to select a photo for child
+    @IBAction func selectChildPhoto(_ sender: Any) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate Methods
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            childImage.contentMode = .scaleAspectFit
+            childImage.image = pickedImage
+            childImage.isHidden = false
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation
