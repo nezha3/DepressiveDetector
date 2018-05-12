@@ -79,9 +79,12 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             newChild.setValue(twitter.text, forKey: "twitterAccount")
             //add save information for image
             if childImage.image != nil {
+                var newImage = childImage.image
+                //change childImage aspect to 4:3
+                newImage = resizedImage(image: newImage!, newSize: CGSize(width: 160, height: 120))
                 let randomName = random(10)
-                NSLog("childImageName: "+"\(randomName)") //only for test
-                saveImageforChild(image: childImage.image!, fileName: randomName)
+                //NSLog("childImageName: "+"\(randomName)") //only for test
+                saveImageforChild(image: newImage!, fileName: randomName) //childImage.image!
                 newChild.setValue(randomName, forKey: "imageName")
                  //NSLog("having Child Image") //only for testing
             } else{
@@ -129,6 +132,19 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             s += String(a[a.index(a.startIndex, offsetBy: r)])
         }
         return s
+    }
+    
+    //Change image aspect
+    //Returns a image that fills in newSize
+    func resizedImage(image: UIImage, newSize: CGSize) -> UIImage {
+        // Guard newSize is different
+        guard image.size != newSize else { return image}
+        
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
     }
     
     //Save Child image

@@ -9,19 +9,6 @@
 import UIKit
 import CoreData
 
-//Set random color for CGFloat
-extension CGFloat {
-    static var random: CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-    }
-}
-//Set random UIColor
-extension UIColor {
-    static var random: UIColor {
-        return UIColor(red: .random, green: .random, blue: .random, alpha: 0.1)
-    }
-}
-
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var detailViewController: DetailViewController? = nil
@@ -113,7 +100,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let child = fetchedResultsController.object(at: indexPath)
         //Configure cell background
-        cell.backgroundColor = UIColor.random
+        cell.backgroundColor = generateRandomColor()
     
         //Configure a cell
         configureCell(cell, withEvent: child)
@@ -121,12 +108,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return cell
     }
 
-
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120;
+    }
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let context = fetchedResultsController.managedObjectContext
@@ -149,7 +139,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         cell.detailTextLabel?.text = child.twitterAccount
         if let imageName = child.imageName {
             if imageName != "" {
-                cell.imageView!.image = getImage(ImageName: imageName) //update imageView of table cell
+                let imageCell = getImage(ImageName: imageName)
+                cell.imageView!.image = imageCell //update imageView of table cell
             } else {
                 cell.imageView!.image = #imageLiteral(resourceName: "child") //set default child image for table cell
             }
@@ -223,6 +214,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
+    }
+    
+    //Random color function
+    func generateRandomColor() -> UIColor {
+        let hue : CGFloat = CGFloat(arc4random() % 256) / 256 // use 256 to get full range from 0.0 to 1.0
+        let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
+        let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
+        
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 0.3)
     }
 
     /*
