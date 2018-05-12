@@ -147,7 +147,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         //Set cell title and subtitle
         cell.textLabel?.text = child.name
         cell.detailTextLabel?.text = child.twitterAccount
-        cell.imageView!.image = getImage(ImageName: "child1") //need to change imge name to specified
+        if let imageName = child.imageName {
+            if imageName != "" {
+                cell.imageView!.image = getImage(ImageName: imageName) //update imageView of table cell
+            } else {
+                cell.imageView!.image = #imageLiteral(resourceName: "child") //set default child image for table cell
+            }
+        }
     }
 
     // MARK: - Fetched results controller

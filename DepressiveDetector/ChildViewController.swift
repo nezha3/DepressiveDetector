@@ -79,11 +79,15 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             newChild.setValue(twitter.text, forKey: "twitterAccount")
             //add save information for image
             if childImage.image != nil {
-                saveImageforChild(image: childImage.image!)
+                let randomName = random(10)
+                NSLog("childImageName: "+"\(randomName)") //only for test
+                saveImageforChild(image: childImage.image!, fileName: randomName)
+                newChild.setValue(randomName, forKey: "imageName")
                  //NSLog("having Child Image") //only for testing
             } else{
                 //add codes for save nil image metadata in database
                  //NSLog("no Child Image") //only for testing
+                newChild.setValue("", forKey: "imageName")
             }
         
 
@@ -116,9 +120,20 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
     }
     
+    //Func: Random Words
+    func random(_ n: Int) -> String {
+        let a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        var s = ""
+        for _ in 0..<n {
+            let r = Int(arc4random_uniform(UInt32(a.count)))
+            s += String(a[a.index(a.startIndex, offsetBy: r)])
+        }
+        return s
+    }
+    
     //Save Child image
-    func saveImageforChild(image: UIImage){
-        let fileName = "child1" //need to specified name for image
+    func saveImageforChild(image: UIImage, fileName: String){
+        //let fileName = "child1" //need to specified name for image
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
         let fileURL = DocumentDirURL.appendingPathComponent("imageforChild").appendingPathComponent(fileName).appendingPathExtension("png")
         
