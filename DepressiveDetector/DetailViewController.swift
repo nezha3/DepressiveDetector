@@ -17,9 +17,10 @@ class DetailViewController: UIViewController {
         // Update the user interface for items.
         if let child = currentChild {
             if let label = childName {
-                label.text = child.name
+                label.text?.append(child.name!) //add child name for title 
             }
         }
+        
         //add more details for items
     }
 
