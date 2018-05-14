@@ -11,10 +11,11 @@ import CoreData
 
 class DetailViewController: UIViewController{
 
-
     @IBOutlet weak var chart: BasicBarChart!
+    
     @IBOutlet weak var childName: UILabel!
     
+   
     func configureView() {
         // Update the user interface for items.
         if let child = currentChild {
@@ -22,11 +23,6 @@ class DetailViewController: UIViewController{
                 label.text?.append(child.name!) //add child name for title 
             }
         }
-        
-        //Draw chart
-        let dataEntries = generateDataEntries()
-        chart.dataEntries = dataEntries
-        //barChart.dataEntries = dataEntries
     }
     
     func generateDataEntries() -> [BarEntry] {
@@ -49,8 +45,13 @@ class DetailViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureView()
+        //Draw chart
+        let dataEntries = generateDataEntries()
+        chart.dataEntries = dataEntries
+        //barChart.dataEntries = dataEntries
     }
     
+    //Transition Display
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         
         super.viewWillTransition(to: size, with: coordinator)

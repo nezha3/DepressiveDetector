@@ -50,17 +50,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-tU-jHx" userLabel="indictors">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="40" width="375" height="263"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Erc-Ti-ai6"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Erc-Ti-ai6"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q4y-a3-FPM" userLabel="chart" customClass="BasicBarChart" customModule="DepressiveDetector" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="375" height="463"/>
+                                        <rect key="frame" x="0.0" y="303" width="375" height="300"/>
                                         <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="gI2-hi-V4v"/>
+                                            <constraint firstAttribute="height" constant="300" id="gI2-hi-V4v"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -80,8 +80,8 @@
                         <barButtonItem key="backBarButtonItem" title="Go Back" id="NvK-dd-NZG"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="chart" destination="Q4y-a3-FPM" id="Aau-h0-ZPk"/>
-                        <outlet property="childName" destination="0XM-y9-sOw" id="nVU-vj-m0i"/>
+                        <outlet property="chart" destination="Q4y-a3-FPM" id="rIu-k1-wkl"/>
+                        <outlet property="childName" destination="0XM-y9-sOw" id="6RJ-qf-JHQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
@@ -359,6 +359,6 @@
         <image name="button" width="198" height="34"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
