@@ -17,6 +17,9 @@
 		17771DDE20A0244E00F46855 /* DepressiveDetectorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DDD20A0244E00F46855 /* DepressiveDetectorUITests.swift */; };
 		17771DEC20A027FD00F46855 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17771DEB20A027FD00F46855 /* Media.xcassets */; };
 		17A35B2020A0546F00532940 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A35B1F20A0546F00532940 /* ChildViewController.swift */; };
+		17C4B6B420A96AB900599E75 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4B6B120A96AB800599E75 /* Chart.swift */; };
+		17C4B6B520A96AB900599E75 /* ChartColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4B6B220A96AB900599E75 /* ChartColors.swift */; };
+		17C4B6B620A96AB900599E75 /* ChartSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4B6B320A96AB900599E75 /* ChartSeries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		17771DDF20A0244E00F46855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17771DEB20A027FD00F46855 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		17A35B1F20A0546F00532940 /* ChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		17C4B6B120A96AB800599E75 /* Chart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Chart.swift; path = "../../../Downloads/SwiftChart-1.0.0/Source/Chart.swift"; sourceTree = "<group>"; };
+		17C4B6B220A96AB900599E75 /* ChartColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartColors.swift; path = "../../../Downloads/SwiftChart-1.0.0/Source/ChartColors.swift"; sourceTree = "<group>"; };
+		17C4B6B320A96AB900599E75 /* ChartSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChartSeries.swift; path = "../../../Downloads/SwiftChart-1.0.0/Source/ChartSeries.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 		17771DB720A0244C00F46855 /* DepressiveDetector */ = {
 			isa = PBXGroup;
 			children = (
+				17C4B6B120A96AB800599E75 /* Chart.swift */,
+				17C4B6B220A96AB900599E75 /* ChartColors.swift */,
+				17C4B6B320A96AB900599E75 /* ChartSeries.swift */,
 				17771DBA20A0244C00F46855 /* DepressiveDetector.xcdatamodeld */,
 				17771DB820A0244C00F46855 /* AppDelegate.swift */,
 				17771DBD20A0244C00F46855 /* MasterViewController.swift */,
@@ -266,7 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				17771DB920A0244C00F46855 /* AppDelegate.swift in Sources */,
+				17C4B6B620A96AB900599E75 /* ChartSeries.swift in Sources */,
 				17A35B2020A0546F00532940 /* ChildViewController.swift in Sources */,
+				17C4B6B420A96AB900599E75 /* Chart.swift in Sources */,
+				17C4B6B520A96AB900599E75 /* ChartColors.swift in Sources */,
 				17771DBC20A0244C00F46855 /* DepressiveDetector.xcdatamodeld in Sources */,
 				17771DBE20A0244C00F46855 /* MasterViewController.swift in Sources */,
 				17771DC020A0244C00F46855 /* DetailViewController.swift in Sources */,
