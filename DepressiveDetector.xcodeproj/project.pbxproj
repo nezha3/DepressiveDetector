@@ -145,8 +145,8 @@
 		17C4B6C420A994BB00599E75 /* BarChart */ = {
 			isa = PBXGroup;
 			children = (
-				17C4B6C020A9947C00599E75 /* BarEntry.swift */,
 				17C4B6C120A9947C00599E75 /* BasicBarChart.swift */,
+				17C4B6C020A9947C00599E75 /* BarEntry.swift */,
 				17C4B6C220A9947C00599E75 /* BeautifulBarChart.swift */,
 			);
 			name = BarChart;

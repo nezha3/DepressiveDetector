@@ -124,9 +124,10 @@ class BeautifulBarChart: UIView {
         segment1Path.addLine(to: CGPoint(x: xPos+topBubbleRadius, y: yPos))
         let segment1Layer = CAShapeLayer()
         segment1Layer.path = segment1Path.cgPath
+        segment1Layer.lineWidth = 0.0
         segment1Layer.fillColor = color.cgColor
         segment1Layer.strokeColor = color.cgColor
-        segment1Layer.lineWidth = 0.0
+        segment1Layer.backgroundColor = color.cgColor
         mainLayer.addSublayer(segment1Layer)
         
         let segment2Path = UIBezierPath()
@@ -138,6 +139,7 @@ class BeautifulBarChart: UIView {
         segment2Layer.fillColor = color.cgColor
         segment2Layer.strokeColor = color.cgColor
         segment2Layer.lineWidth = 0.0
+        segment2Layer.backgroundColor = color.cgColor
         mainLayer.addSublayer(segment2Layer)
         
         let segment3Path = UIBezierPath()
@@ -149,6 +151,7 @@ class BeautifulBarChart: UIView {
         segment3Layer.fillColor = color.cgColor
         segment3Layer.strokeColor = color.cgColor
         segment3Layer.lineWidth = 0.0
+        segment3Layer.backgroundColor = color.cgColor
         mainLayer.addSublayer(segment3Layer)
         
         let segment4Path = UIBezierPath()
@@ -160,6 +163,7 @@ class BeautifulBarChart: UIView {
         segment4Layer.fillColor = color.cgColor
         segment4Layer.strokeColor = color.cgColor
         segment4Layer.lineWidth = 0.0
+        segment4Layer.backgroundColor = color.cgColor
         mainLayer.addSublayer(segment4Layer)
     }
     
