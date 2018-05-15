@@ -24,8 +24,17 @@ class DetailViewController: UIViewController{
             }
         }
     }
+    func drawChart(){
+        //Draw chart
+        let dataEntries = generateDataEntries(days: 30) //series for a month
+        let dataEntries2 = generateDataEntries(days: 7)  // series for a week
+        //Set data series for up chart with data in a week
+        chart.dataEntries = dataEntries //below chart
+        chart2.dataEntries = dataEntries2 //up chart
+    }
     
     func generateDataEntries(days: Int) -> [BarEntry] {
+        //NSLog("\(String(describing: currentChild?.name))") //only for test
         let colors = [UIColor.red, UIColor(displayP3Red: 0.17, green: 0.58, blue: 0.17, alpha: 1.0)]
         var result: [BarEntry] = []
         //add code for retrieve days of risks from database
@@ -50,12 +59,7 @@ class DetailViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureView()
-        //Draw chart
-        let dataEntries = generateDataEntries(days: 30) //series for a month
-        let dataEntries2 = generateDataEntries(days: 7)  // series for a week
-        //Set data series for up chart with data in a week
-        chart.dataEntries = dataEntries //below chart
-        chart2.dataEntries = dataEntries2 //up chart
+        drawChart()
     }
     
     //Transition Display
@@ -78,6 +82,14 @@ class DetailViewController: UIViewController{
         didSet {
             // Update the view.
             configureView()
+        }
+    }
+    
+    //Attribute from class in coredata
+    //Risks of Current Child in that row of table view
+    var currentRisk: Risk? {
+        didSet {
+            // Get risks of currentChild.
         }
     }
 
