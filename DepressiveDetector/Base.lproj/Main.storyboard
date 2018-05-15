@@ -49,7 +49,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-tU-jHx" userLabel="indictors">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrI-tU-jHx" userLabel="indictors" customClass="BeautifulBarChart" customModule="DepressiveDetector" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40" width="375" height="263"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -81,6 +81,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chart" destination="Q4y-a3-FPM" id="rIu-k1-wkl"/>
+                        <outlet property="chart2" destination="hrI-tU-jHx" id="VtU-e1-CQc"/>
                         <outlet property="childName" destination="0XM-y9-sOw" id="6RJ-qf-JHQ"/>
                     </connections>
                 </viewController>
