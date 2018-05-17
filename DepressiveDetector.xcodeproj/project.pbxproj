@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06BAF61E8A1686B1DD3A10D6 /* Pods_DepressiveDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1193C03E8D744AA71832D1C9 /* Pods_DepressiveDetector.framework */; };
 		17771DB920A0244C00F46855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DB820A0244C00F46855 /* AppDelegate.swift */; };
 		17771DBC20A0244C00F46855 /* DepressiveDetector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17771DBA20A0244C00F46855 /* DepressiveDetector.xcdatamodeld */; };
 		17771DBE20A0244C00F46855 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DBD20A0244C00F46855 /* MasterViewController.swift */; };
@@ -21,6 +22,8 @@
 		17EC9F1720A9A6660013F19E /* BasicBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4B6C120A9947C00599E75 /* BasicBarChart.swift */; };
 		17EC9F1820A9A6660013F19E /* BeautifulBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4B6C220A9947C00599E75 /* BeautifulBarChart.swift */; };
 		17EC9F1A20A9A6760013F19E /* Media.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 17771DEB20A027FD00F46855 /* Media.xcassets */; };
+		6DAF5A3B7773FF3697E4C8B0 /* Pods_DepressiveDetectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D302DA15DA2B0F0A0F7977 /* Pods_DepressiveDetectorTests.framework */; };
+		B53E397542C58ACC3C7CB024 /* Pods_DepressiveDetectorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A77B4686C3EB607B9CDB83 /* Pods_DepressiveDetectorUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01A77B4686C3EB607B9CDB83 /* Pods_DepressiveDetectorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetectorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1193C03E8D744AA71832D1C9 /* Pods_DepressiveDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D302DA15DA2B0F0A0F7977 /* Pods_DepressiveDetectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetectorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17771DB520A0244C00F46855 /* DepressiveDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepressiveDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17771DB820A0244C00F46855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17771DBB20A0244C00F46855 /* DepressiveDetector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DepressiveDetector.xcdatamodel; sourceTree = "<group>"; };
@@ -60,6 +66,12 @@
 		17C4B6C020A9947C00599E75 /* BarEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarEntry.swift; sourceTree = "<group>"; };
 		17C4B6C120A9947C00599E75 /* BasicBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicBarChart.swift; sourceTree = "<group>"; };
 		17C4B6C220A9947C00599E75 /* BeautifulBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulBarChart.swift; sourceTree = "<group>"; };
+		1F82F43E6ABD53B13AC218EA /* Pods-DepressiveDetectorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorUITests/Pods-DepressiveDetectorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2E13349620BD88F510BD0D3B /* Pods-DepressiveDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector.debug.xcconfig"; sourceTree = "<group>"; };
+		3756D303651141975ACDA35E /* Pods-DepressiveDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetector.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector.release.xcconfig"; sourceTree = "<group>"; };
+		834DB22F8FC5C9F04BD63EEC /* Pods-DepressiveDetectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorTests/Pods-DepressiveDetectorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		93C58A8A115363582E59FAE2 /* Pods-DepressiveDetectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorTests/Pods-DepressiveDetectorTests.release.xcconfig"; sourceTree = "<group>"; };
+		BFD944FE634F4F3F5C7FF07E /* Pods-DepressiveDetectorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorUITests/Pods-DepressiveDetectorUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06BAF61E8A1686B1DD3A10D6 /* Pods_DepressiveDetector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DAF5A3B7773FF3697E4C8B0 /* Pods_DepressiveDetectorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53E397542C58ACC3C7CB024 /* Pods_DepressiveDetectorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +109,8 @@
 				17771DD120A0244E00F46855 /* DepressiveDetectorTests */,
 				17771DDC20A0244E00F46855 /* DepressiveDetectorUITests */,
 				17771DB620A0244C00F46855 /* Products */,
+				2AADA83103319D0647A6F4E0 /* Pods */,
+				4685DB2082915C76C1FEDA8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +169,29 @@
 			name = BarChart;
 			sourceTree = "<group>";
 		};
+		2AADA83103319D0647A6F4E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E13349620BD88F510BD0D3B /* Pods-DepressiveDetector.debug.xcconfig */,
+				3756D303651141975ACDA35E /* Pods-DepressiveDetector.release.xcconfig */,
+				834DB22F8FC5C9F04BD63EEC /* Pods-DepressiveDetectorTests.debug.xcconfig */,
+				93C58A8A115363582E59FAE2 /* Pods-DepressiveDetectorTests.release.xcconfig */,
+				BFD944FE634F4F3F5C7FF07E /* Pods-DepressiveDetectorUITests.debug.xcconfig */,
+				1F82F43E6ABD53B13AC218EA /* Pods-DepressiveDetectorUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4685DB2082915C76C1FEDA8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1193C03E8D744AA71832D1C9 /* Pods_DepressiveDetector.framework */,
+				16D302DA15DA2B0F0A0F7977 /* Pods_DepressiveDetectorTests.framework */,
+				01A77B4686C3EB607B9CDB83 /* Pods_DepressiveDetectorUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17771DE220A0244E00F46855 /* Build configuration list for PBXNativeTarget "DepressiveDetector" */;
 			buildPhases = (
+				BF93F40F31CBA4F599BCB194 /* [CP] Check Pods Manifest.lock */,
 				17771DB120A0244C00F46855 /* Sources */,
 				17771DB220A0244C00F46855 /* Frameworks */,
 				17771DB320A0244C00F46855 /* Resources */,
+				7AB350175EA4A73AD9E8BA8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17771DE520A0244E00F46855 /* Build configuration list for PBXNativeTarget "DepressiveDetectorTests" */;
 			buildPhases = (
+				60B805DA0477C44FD08A8158 /* [CP] Check Pods Manifest.lock */,
 				17771DCA20A0244E00F46855 /* Sources */,
 				17771DCB20A0244E00F46855 /* Frameworks */,
 				17771DCC20A0244E00F46855 /* Resources */,
@@ -194,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17771DE820A0244E00F46855 /* Build configuration list for PBXNativeTarget "DepressiveDetectorUITests" */;
 			buildPhases = (
+				F740619707C24CBF8FBC2C17 /* [CP] Check Pods Manifest.lock */,
 				17771DD520A0244E00F46855 /* Sources */,
 				17771DD620A0244E00F46855 /* Frameworks */,
 				17771DD720A0244E00F46855 /* Resources */,
@@ -277,6 +321,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60B805DA0477C44FD08A8158 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DepressiveDetectorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AB350175EA4A73AD9E8BA8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF93F40F31CBA4F599BCB194 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DepressiveDetector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F740619707C24CBF8FBC2C17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DepressiveDetectorUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17771DB120A0244C00F46855 /* Sources */ = {
@@ -462,6 +583,7 @@
 		};
 		17771DE320A0244E00F46855 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E13349620BD88F510BD0D3B /* Pods-DepressiveDetector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -480,6 +602,7 @@
 		};
 		17771DE420A0244E00F46855 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3756D303651141975ACDA35E /* Pods-DepressiveDetector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -498,6 +621,7 @@
 		};
 		17771DE620A0244E00F46855 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 834DB22F8FC5C9F04BD63EEC /* Pods-DepressiveDetectorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,6 +643,7 @@
 		};
 		17771DE720A0244E00F46855 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93C58A8A115363582E59FAE2 /* Pods-DepressiveDetectorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,6 +665,7 @@
 		};
 		17771DE920A0244E00F46855 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFD944FE634F4F3F5C7FF07E /* Pods-DepressiveDetectorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -560,6 +686,7 @@
 		};
 		17771DEA20A0244E00F46855 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F82F43E6ABD53B13AC218EA /* Pods-DepressiveDetectorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
