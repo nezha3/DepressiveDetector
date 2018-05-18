@@ -97,6 +97,7 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             newChild.setValue(Date(), forKey: "lastAccessDate")
             newChild.setValue(0.0, forKey: "currentMood")
             newChild.setValue(false, forKey: "ifAlert")
+            newChild.setValue(0, forKey: "twitterMissingDays")
 
             // Save the context.
             do {

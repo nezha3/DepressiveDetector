@@ -51,25 +51,83 @@ class DetailViewController: UIViewController{
                 label.text?.append(child.name!) //add child name for title 
             }
         }
+        
         //Display current mood
         if let mood = currentChild?.currentMood {
+            leftLabel?.text = "\(mood)"
             switch mood {
             case 0.0 ..< 0.3:
-                leftLabel?.text = "\(mood)"
+                leftImage?.image = #imageLiteral(resourceName: "face4")
+                leftLabel?.textColor = UIColor.green
             case 0.3 ..< 0.6:
-                leftLabel.text = "3"
+                leftImage?.image = #imageLiteral(resourceName: "face5")
+                leftLabel?.textColor = UIColor.green
             case 0.6 ..< 1.1:
-                leftLabel.text = "6"
+                leftImage?.image = #imageLiteral(resourceName: "face6")
+                leftLabel?.textColor = UIColor.green
             case -0.3 ..< 0.0:
-                leftLabel.text = "-0"
+                leftImage?.image = #imageLiteral(resourceName: "face3")
+                leftLabel?.textColor = UIColor.red
             case -0.6 ..< -0.3:
-                leftLabel.text = "-3"
+                leftImage?.image = #imageLiteral(resourceName: "face2")
+                leftLabel?.textColor = UIColor.red
             case -1.1 ..< -0.6:
-                leftLabel.text = "-6"
+                leftImage?.image = #imageLiteral(resourceName: "face1")
+                leftLabel?.textColor = UIColor.red
             default:
                 NSLog("currentMood(-1~1) in Alert of database is in a wrong range")
             }
         }
+        
+        //Display Alert Indicator
+        if let alert = currentChild?.ifAlert {
+            if alert == true {
+                rightLabel?.textColor = UIColor.red
+                rightLabel?.text = "extreme risk"
+                rightImage?.image = #imageLiteral(resourceName: "alert_true")
+            } else {
+                rightLabel?.textColor = UIColor.green
+                rightLabel?.text = "low risk"
+                rightImage?.image = #imageLiteral(resourceName: "alert_false")
+            }
+        }
+        
+        //Display Twitter Last Post Days
+        if let twitterMissingDays = currentChild?.twitterMissingDays {
+            switch twitterMissingDays {
+            case 0:
+                middleImage?.image = #imageLiteral(resourceName: "twitter_green")
+                middleLabel?.text = "current"
+                middleLabel?.textColor = UIColor.green
+            case 1:
+                middleImage?.image = #imageLiteral(resourceName: "twitter_green")
+                middleLabel?.text = "1 day miss"
+                middleLabel?.textColor = UIColor.green
+            case 2..<4:
+                middleImage?.image = #imageLiteral(resourceName: "twitter_green")
+                middleLabel?.text = "\(twitterMissingDays)" + " days miss"
+                middleLabel?.textColor = UIColor.green
+            case 4..<8:
+                middleImage?.image = #imageLiteral(resourceName: "twitter_red")
+                middleLabel?.text = "\(twitterMissingDays)" + " days miss"
+                middleLabel?.textColor = UIColor.red
+            case 8..<30:
+                middleImage?.image = #imageLiteral(resourceName: "twitter_red")
+                middleLabel?.text = "> week miss"
+                middleLabel?.textColor = UIColor.red
+            case 30..<365:
+                middleImage?.image = #imageLiteral(resourceName: "twitter_red")
+                middleLabel?.text = "> month miss"
+                middleLabel?.textColor = UIColor.red
+            default:
+                middleImage?.image = #imageLiteral(resourceName: "twitter_red")
+                middleLabel?.text = "no twitter at all"
+                middleLabel?.textColor = UIColor.red
+            }
+        }
+       
+        
+        
     }
     
     func drawChart(){

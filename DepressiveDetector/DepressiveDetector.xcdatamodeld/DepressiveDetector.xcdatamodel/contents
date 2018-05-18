@@ -6,6 +6,7 @@
         <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastAccessDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="twitterMissingDays" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="twitterSinceID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="twitterUserID" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -17,7 +18,7 @@
         <attribute name="twitterSinceID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Child" positionX="261" positionY="198" width="128" height="150"/>
+        <element name="Child" positionX="261" positionY="198" width="128" height="165"/>
         <element name="Risk" positionX="270" positionY="234" width="128" height="120"/>
     </elements>
 </model>
