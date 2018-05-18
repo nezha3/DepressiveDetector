@@ -36,6 +36,12 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var chart: BasicBarChart!
     @IBOutlet weak var chart2: BeautifulBarChart!
     @IBOutlet weak var childName: UILabel!
+    @IBOutlet weak var leftImage: UIImageView!
+    @IBOutlet weak var middleImage: UIImageView!
+    @IBOutlet weak var rightImage: UIImageView!
+    @IBOutlet weak var leftLabel: UILabel!
+    @IBOutlet weak var middleLabel: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
     
    
     func configureView() {
@@ -43,6 +49,25 @@ class DetailViewController: UIViewController{
         if let child = currentChild {
             if let label = childName {
                 label.text?.append(child.name!) //add child name for title 
+            }
+        }
+        //Display current mood
+        if let mood = currentChild?.currentMood {
+            switch mood {
+            case 0.0 ..< 0.3:
+                leftLabel?.text = "\(mood)"
+            case 0.3 ..< 0.6:
+                leftLabel.text = "3"
+            case 0.6 ..< 1.1:
+                leftLabel.text = "6"
+            case -0.3 ..< 0.0:
+                leftLabel.text = "-0"
+            case -0.6 ..< -0.3:
+                leftLabel.text = "-3"
+            case -1.1 ..< -0.6:
+                leftLabel.text = "-6"
+            default:
+                NSLog("currentMood(-1~1) in Alert of database is in a wrong range")
             }
         }
     }
@@ -89,9 +114,9 @@ class DetailViewController: UIViewController{
         // retrieveTwitter(twitterId:userID,sinceId: "983456300179783680")
         // retrieveTwitter(twitterId:userID,sinceId:nil)
         if (currentChild?.twitterSinceID == 0) {
-            retrieveTwitter(twitterId: (currentChild?.twitterUserID)!,sinceId: nil)
+            //retrieveTwitter(twitterId: (currentChild?.twitterUserID)!,sinceId: nil)
         } else {
-            retrieveTwitter(twitterId:  (currentChild?.twitterUserID)!,sinceId: "\( (currentChild?.twitterSinceID)!)")
+            //retrieveTwitter(twitterId:  (currentChild?.twitterUserID)!,sinceId: "\( (currentChild?.twitterSinceID)!)")
         }
         
         //draw the charts
