@@ -12,6 +12,25 @@ import Alamofire
 import SwiftyJSON
 import Foundation
 
+//Convert String to Date
+extension String {
+    func toDate( dateFormat format  : String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        return dateFormatter.date(from: self)!
+    }
+}
+
+//Convert Date to String
+extension Date {
+    func toString( dateFormat format  : String ) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+}
+
 class DetailViewController: UIViewController{
 
     @IBOutlet weak var chart: BasicBarChart!
@@ -27,6 +46,7 @@ class DetailViewController: UIViewController{
             }
         }
     }
+    
     func drawChart(){
         //Draw chart
         let dataEntries = generateDataEntries(days: 30) //series for a month
@@ -35,6 +55,7 @@ class DetailViewController: UIViewController{
         chart.dataEntries = dataEntries //below chart
         chart2.dataEntries = dataEntries2 //up chart
     }
+    
     
     func generateDataEntries(days: Int) -> [BarEntry] {
         //NSLog("\(String(describing: currentChild?.name))") //only for test
@@ -57,17 +78,24 @@ class DetailViewController: UIViewController{
         }
         return result
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureView()
-        drawChart()
         
         //retrieve twitter and google ML cloud
-        let userID = "dropaphone"
+        //let userID = "dropaphone"
         // retrieveTwitter(twitterId:userID,sinceId: "983456300179783680")
-        retrieveTwitter(twitterId:userID,sinceId:nil)
+        // retrieveTwitter(twitterId:userID,sinceId:nil)
+        if (currentChild?.twitterSinceID == 0) {
+            retrieveTwitter(twitterId: (currentChild?.twitterUserID)!,sinceId: nil)
+        } else {
+            retrieveTwitter(twitterId:  (currentChild?.twitterUserID)!,sinceId: "\( (currentChild?.twitterSinceID)!)")
+        }
+        
+        //draw the charts
+        drawChart()
     }
     
     //Transition Display
@@ -93,19 +121,15 @@ class DetailViewController: UIViewController{
         }
     }
     
-    //Attribute from class in coredata
-    //Risks of Current Child in that row of table view
-    var currentRisk: Risk? {
-        didSet {
-            // Get risks of currentChild.
-        }
-    }
 
     
+
+    //Google ML Cloud Service Access Token Set and Get Risks from Google Analysis
     func gcRequest(text : String, since_id : String, create_date : String) {
-        //let urlAuthen = "https://api.twitter.com/oauth2/token";
+        //Google ML Cloud Service Access Token
         let urlAuthen = "https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyAGwAOOPRKjSDxQZj4WJUhYM8zHTElywjI";
         
+        //Parameters for Post Message
         let parameters: Parameters = [
             "encodingType": "UTF8",
             "document": [
@@ -114,33 +138,49 @@ class DetailViewController: UIViewController{
             ]
         ]
         
-        
-        Alamofire.request(urlAuthen, method: .post, parameters: parameters,encoding: JSONEncoding.default).responseJSON
+        //Alamofire a Request to Google ML Cloud Server
+        Alamofire.request(urlAuthen,method: .post, parameters: parameters,  encoding: JSONEncoding.default).responseJSON
             { (response:DataResponse) in
                 switch response.result {
-                case .success(let value):
-                    let jsonAuthen = JSON(value)
-                    //print(jsonAuthen)
-                    print("==========================")
-                    print("twitter_id: \(since_id)")
-                    print("create_time: \(create_date)")
-                    print("twitter_content: \(text)")
-                    print("magnitude: \(jsonAuthen["documentSentiment"]["magnitude"])")
-                    print("score: \(jsonAuthen["documentSentiment"]["score"])")
-                    print("\n")
-                case .failure(let error):
-                    print(error)
-                    return
-                }
+                    case .success(let value):
+                        let jsonAuthen = JSON(value)
+                        
+                        //print(jsonAuthen) //test only
+                        print("==========================")
+                        print("twitter_id: \(since_id)")
+                        print("create_time: \(create_date)")
+                        print("twitter_content: \(text)")
+                        print("magnitude: \(jsonAuthen["documentSentiment"]["magnitude"])")
+                        print("score: \(jsonAuthen["documentSentiment"]["score"])")
+                        print("\n")
+                        //print(jsonAuthen) //test only
+                        
+                        //save chidName in Risk and update lastAccessDate in Child
+                        //store twitterSinceID in Risk
+                        //store postDate in Risk
+                        //save magnitude and score in Risk
+                        let date = create_date.toDate(dateFormat: "EEE MMM dd HH:mm:ss ZZZZZ yyyy")
+                        let sinceid = Int64(since_id)
+                        let m = Float("\(jsonAuthen["documentSentiment"]["magnitude"])")
+                        let s = Float("\(jsonAuthen["documentSentiment"]["score"])")
+                        self.saveChild(sinceID: sinceid!, date: Date())
+                        self.saveRisk(name: (self.currentChild?.name)!, sinceID: sinceid!, postDate: date, magnitude: m!, score: s!)
+                    
+                    case .failure(let error):
+                        print(error)
+                        return
+                    }
         }
         
     }
     
-    
-    let twitterID = "dropaphone"
+    //Twitter App Access Token Set and Get Post from Targetted Twitter User ID
     func retrieveTwitter(twitterId:String,sinceId:String?) {
+        //Set Twitter APP Access Token
         let customerKey = "ZfyJo2mBTk1ZZELJRe7soNAyz"
         let customerSecret = "fOuA7PwFBrU64zX0ahlu7wiFPzXmN3xaHJFENAC0wVu71VZFrd"
+        
+        //Set Parameters
         let keyValue = "\(customerKey):\(customerSecret)"
         let utf8strKey = keyValue.data(using: String.Encoding.utf8)
         let base64Encoded = utf8strKey!.base64EncodedString();
@@ -151,55 +191,100 @@ class DetailViewController: UIViewController{
                        "Content-Type": "application/x-www-form-urlencoded"]
         let parameters: Parameters = ["grant_type": "client_credentials"]
         
-        
+        //Alamofire a Request to Twitter Server
         Alamofire.request(urlAuthen, method: .post, parameters: parameters,headers: headers).responseJSON
             { (response:DataResponse) in
                 switch response.result {
-                case .success(let value):
-                    let jsonAuthen = JSON(value)
-                    let token = jsonAuthen["access_token"].description
-                    print("Token: \(token)")
-                    var parametersTimeLine : Parameters = Parameters();
-                    parametersTimeLine["screen_name"] = twitterId;
-                    if (sinceId != nil)
-                    {
-                        parametersTimeLine["since_id"] = sinceId;
-                    }
+                    case .success(let value):
+                        let jsonAuthen = JSON(value)
+                        let token = jsonAuthen["access_token"].description
+                        print("Token: \(token)")
+                        var parametersTimeLine : Parameters = Parameters();
+                        parametersTimeLine["screen_name"] = twitterId;
+                        if (sinceId != nil) {
+                            parametersTimeLine["since_id"] = sinceId;
+                        }
                     
-                    
-                    // let parametersTimeLine: Parameters = ["screen_name": twitterID,
-                    //                                       "since_id":"983456300179783680"]
-                    // let parametersTimeLine: Parameters = ["screen_name": twitterId]
-                    
-                    let timeLineAuthen = "Bearer \(token)";
-                    let headersTimeLine = ["Authorization" : timeLineAuthen]
-                    
-                    Alamofire.request(urlTimeLine, parameters: parametersTimeLine,headers: headersTimeLine).responseJSON
-                        {
-                            (response1:DataResponse) in
-                            switch response1.result {
-                            case .success(let value):
-                                let json = JSON(value)
-                                for twitter in json.arrayValue
-                                {
-                                    // print("==========================")
-                                    // print("since_id: \(twitter["id"].description)")
-                                    // print("create_time: \(twitter["created_at"].description)")
-                                    // print("twitter_content: \(twitter["text"].description)")
-                                    // print("\n")
-                                    self.gcRequest(text: twitter["text"].description, since_id:  twitter["id"].description,create_date:  twitter["created_at"].description)
-                                    
+                        //Send Posts to Google Natural Language Processing
+                        let timeLineAuthen = "Bearer \(token)";
+                        let headersTimeLine = ["Authorization" : timeLineAuthen]
+                        Alamofire.request(urlTimeLine, parameters: parametersTimeLine,headers: headersTimeLine).responseJSON {
+                                (response1:DataResponse) in
+                                switch response1.result {
+                                    case .success(let value):
+                                        let json = JSON(value)
+                                        for twitter in json.arrayValue {
+                                            self.gcRequest(text: twitter["text"].description, since_id:  twitter["id"].description,create_date:  twitter["created_at"].description)
+                                        }
+                                    case .failure(let error):
+                                        print(error)
                                 }
-                            case .failure(let error):
-                                print(error)
-                            }
                     }
                     
-                case .failure(let error):
-                    print(error)
-                    return
+                    case .failure(let error):
+                        print(error)
+                        return
                 }
         }
     }
+    
+    
+    //Save Information of Risk in database
+    func saveRisk(name: String, sinceID: Int64, postDate: Date, magnitude: Float, score: Float) -> Void {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Risk", in: context)
+        let newRisk = NSManagedObject(entity: entity!, insertInto: context)
+        
+        //set all attributes
+        newRisk.setValue(name, forKey: "childName")
+        newRisk.setValue(sinceID, forKey: "twitterSinceID")
+        newRisk.setValue(postDate, forKey: "postDate")
+        newRisk.setValue(magnitude, forKey: "magnitude")
+        newRisk.setValue(score, forKey: "score")
+        
+        // Save the context.
+        do {
+            try context.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
+    //Save Information of Child in database
+    func saveChild(sinceID: Int64, date: Date) -> Void {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Child")
+        
+        fetchRequest.predicate = NSPredicate(format: "name == %@ && twitterSinceID < %@", argumentArray: [(currentChild?.name)!, sinceID])
+        
+        do {
+            let results = try context.fetch(fetchRequest) as? [NSManagedObject]
+            if results?.count != 0 { // Atleast one was returned
+                results![0].setValue(sinceID, forKey: "twitterSinceID")
+                results![0].setValue(date, forKey: "lastAccessDate")
+            }
+        } catch {
+            print("Fetch Failed in Child: \(error)")
+        }
+        
+        // Save the context.
+        do {
+            try context.save()
+        } catch {
+            // Replace this implementation with code to handle the error appropriately.
+            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
+    
+    
+    
 }
 

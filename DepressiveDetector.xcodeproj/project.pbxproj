@@ -7,62 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06BAF61E8A1686B1DD3A10D6 /* Pods_DepressiveDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1193C03E8D744AA71832D1C9 /* Pods_DepressiveDetector.framework */; };
-		170DD8A820AD385700644F1D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 170DD84820AD385600644F1D /* LICENSE */; };
-		170DD8A920AD385700644F1D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD84A20AD385600644F1D /* SwiftyJSON.swift */; };
-		170DD8AA20AD385700644F1D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 170DD84B20AD385600644F1D /* README.md */; };
-		170DD8AB20AD385700644F1D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 170DD85020AD385600644F1D /* LICENSE */; };
-		170DD8AC20AD385700644F1D /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85220AD385600644F1D /* TaskDelegate.swift */; };
-		170DD8AD20AD385700644F1D /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85320AD385600644F1D /* MultipartFormData.swift */; };
-		170DD8AE20AD385700644F1D /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85420AD385600644F1D /* NetworkReachabilityManager.swift */; };
-		170DD8AF20AD385700644F1D /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85520AD385600644F1D /* Timeline.swift */; };
-		170DD8B020AD385700644F1D /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85620AD385600644F1D /* DispatchQueue+Alamofire.swift */; };
-		170DD8B120AD385700644F1D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85720AD385600644F1D /* Result.swift */; };
-		170DD8B220AD385700644F1D /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85820AD385600644F1D /* ParameterEncoding.swift */; };
-		170DD8B320AD385700644F1D /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85920AD385600644F1D /* AFError.swift */; };
-		170DD8B420AD385700644F1D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85A20AD385600644F1D /* Validation.swift */; };
-		170DD8B520AD385700644F1D /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85B20AD385600644F1D /* Notifications.swift */; };
-		170DD8B620AD385700644F1D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85C20AD385600644F1D /* Response.swift */; };
-		170DD8B720AD385700644F1D /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85D20AD385600644F1D /* Alamofire.swift */; };
-		170DD8B820AD385700644F1D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85E20AD385600644F1D /* Request.swift */; };
-		170DD8B920AD385700644F1D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD85F20AD385600644F1D /* SessionManager.swift */; };
-		170DD8BA20AD385700644F1D /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD86020AD385600644F1D /* ResponseSerialization.swift */; };
-		170DD8BB20AD385700644F1D /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD86120AD385600644F1D /* ServerTrustPolicy.swift */; };
-		170DD8BC20AD385700644F1D /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170DD86220AD385600644F1D /* SessionDelegate.swift */; };
-		170DD8BD20AD385700644F1D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 170DD86320AD385600644F1D /* README.md */; };
-		170DD8BE20AD385700644F1D /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 170DD86920AD385600644F1D /* SwiftyJSON-dummy.m */; };
-		170DD8BF20AD385700644F1D /* SwiftyJSON.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170DD86A20AD385600644F1D /* SwiftyJSON.xcconfig */; };
-		170DD8C020AD385700644F1D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 170DD86B20AD385600644F1D /* Info.plist */; };
-		170DD8C120AD385700644F1D /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 170DD86D20AD385600644F1D /* Alamofire-dummy.m */; };
-		170DD8C220AD385700644F1D /* Alamofire.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170DD86E20AD385600644F1D /* Alamofire.xcconfig */; };
-		170DD8C320AD385700644F1D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 170DD87220AD385600644F1D /* Info.plist */; };
-		170DD8C420AD385700644F1D /* Pods-DepressiveDetectorUITests-frameworks.sh in Resources */ = {isa = PBXBuildFile; fileRef = 170DD87420AD385600644F1D /* Pods-DepressiveDetectorUITests-frameworks.sh */; };
-		170DD8C520AD385700644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 170DD87620AD385600644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.plist */; };
-		170DD8C620AD385700644F1D /* Pods-DepressiveDetectorUITests-resources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 170DD87720AD385600644F1D /* Pods-DepressiveDetectorUITests-resources.sh */; };
-		170DD8C720AD385700644F1D /* Pods-DepressiveDetectorUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 170DD87820AD385600644F1D /* Pods-DepressiveDetectorUITests-dummy.m */; };
-		170DD8C820AD385700644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 170DD87920AD385600644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.markdown */; };
-		170DD8C920AD385700644F1D /* Pods-DepressiveDetectorUITests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170DD87B20AD385600644F1D /* Pods-DepressiveDetectorUITests.release.xcconfig */; };
-		170DD8CA20AD385700644F1D /* Pods-DepressiveDetectorUITests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170DD87C20AD385600644F1D /* Pods-DepressiveDetectorUITests.debug.xcconfig */; };
-		170DD8CB20AD385700644F1D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 170DD87D20AD385600644F1D /* Info.plist */; };
-		170DD8CC20AD385700644F1D /* Pods-DepressiveDetectorTests-acknowledgements.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88120AD385600644F1D /* Pods-DepressiveDetectorTests-acknowledgements.markdown */; };
-		170DD8CD20AD385700644F1D /* Pods-DepressiveDetectorTests-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88220AD385600644F1D /* Pods-DepressiveDetectorTests-acknowledgements.plist */; };
-		170DD8CE20AD385700644F1D /* Pods-DepressiveDetectorTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 170DD88320AD385600644F1D /* Pods-DepressiveDetectorTests-dummy.m */; };
-		170DD8CF20AD385700644F1D /* Pods-DepressiveDetectorTests-frameworks.sh in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88420AD385600644F1D /* Pods-DepressiveDetectorTests-frameworks.sh */; };
-		170DD8D020AD385700644F1D /* Pods-DepressiveDetectorTests-resources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88520AD385600644F1D /* Pods-DepressiveDetectorTests-resources.sh */; };
-		170DD8D120AD385700644F1D /* Pods-DepressiveDetectorTests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88620AD385600644F1D /* Pods-DepressiveDetectorTests.debug.xcconfig */; };
-		170DD8D220AD385700644F1D /* Pods-DepressiveDetectorTests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88720AD385600644F1D /* Pods-DepressiveDetectorTests.release.xcconfig */; };
-		170DD8D320AD385700644F1D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88820AD385600644F1D /* Info.plist */; };
-		170DD8D420AD385700644F1D /* Pods-DepressiveDetector-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88A20AD385600644F1D /* Pods-DepressiveDetector-acknowledgements.plist */; };
-		170DD8D520AD385700644F1D /* Pods-DepressiveDetector.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88C20AD385600644F1D /* Pods-DepressiveDetector.debug.xcconfig */; };
-		170DD8D620AD385700644F1D /* Pods-DepressiveDetector.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88D20AD385600644F1D /* Pods-DepressiveDetector.release.xcconfig */; };
-		170DD8D720AD385700644F1D /* Pods-DepressiveDetector-resources.sh in Resources */ = {isa = PBXBuildFile; fileRef = 170DD88F20AD385600644F1D /* Pods-DepressiveDetector-resources.sh */; };
-		170DD8D820AD385700644F1D /* Pods-DepressiveDetector-acknowledgements.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 170DD89020AD385600644F1D /* Pods-DepressiveDetector-acknowledgements.markdown */; };
-		170DD8D920AD385700644F1D /* Pods-DepressiveDetector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 170DD89120AD385600644F1D /* Pods-DepressiveDetector-dummy.m */; };
-		170DD8DA20AD385700644F1D /* Pods-DepressiveDetector-frameworks.sh in Resources */ = {isa = PBXBuildFile; fileRef = 170DD89220AD385600644F1D /* Pods-DepressiveDetector-frameworks.sh */; };
-		170DD8DB20AD385700644F1D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 170DD89320AD385600644F1D /* Info.plist */; };
-		170DD8DC20AD385700644F1D /* Manifest.lock in Resources */ = {isa = PBXBuildFile; fileRef = 170DD89420AD385600644F1D /* Manifest.lock */; };
-		170DD8DD20AD385700644F1D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 170DD8A620AD385600644F1D /* Podfile */; };
-		170DD8DE20AD385700644F1D /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 170DD8A720AD385600644F1D /* Podfile.lock */; };
+		1556CA1B974DB3FB9E2557D9 /* Pods_DepressiveDetectorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83C3313AAE2116D6DF62B48 /* Pods_DepressiveDetectorUITests.framework */; };
 		17771DB920A0244C00F46855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DB820A0244C00F46855 /* AppDelegate.swift */; };
 		17771DBC20A0244C00F46855 /* DepressiveDetector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17771DBA20A0244C00F46855 /* DepressiveDetector.xcdatamodeld */; };
 		17771DBE20A0244C00F46855 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17771DBD20A0244C00F46855 /* MasterViewController.swift */; };
@@ -77,46 +22,11 @@
 		17EC9F1720A9A6660013F19E /* BasicBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4B6C120A9947C00599E75 /* BasicBarChart.swift */; };
 		17EC9F1820A9A6660013F19E /* BeautifulBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4B6C220A9947C00599E75 /* BeautifulBarChart.swift */; };
 		17EC9F1A20A9A6760013F19E /* Media.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 17771DEB20A027FD00F46855 /* Media.xcassets */; };
-		6DAF5A3B7773FF3697E4C8B0 /* Pods_DepressiveDetectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D302DA15DA2B0F0A0F7977 /* Pods_DepressiveDetectorTests.framework */; };
-		B53E397542C58ACC3C7CB024 /* Pods_DepressiveDetectorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A77B4686C3EB607B9CDB83 /* Pods_DepressiveDetectorUITests.framework */; };
+		BCB6F6B76796AE0F22191729 /* Pods_DepressiveDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E492415EBFA2F2583CEC8AEA /* Pods_DepressiveDetector.framework */; };
+		D0205BD429BB8EB876441B11 /* Pods_DepressiveDetectorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C789E27B53586504D082E8B /* Pods_DepressiveDetectorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		170DD89C20AD385600644F1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 170DD84C20AD385600644F1D /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 48A24930FD7D2508E450E1E493E3B9AF;
-			remoteInfo = Alamofire;
-		};
-		170DD89E20AD385600644F1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 170DD84C20AD385600644F1D /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 863696A3D08BE26733C3E9F7C45AA8A0;
-			remoteInfo = "Pods-DepressiveDetector";
-		};
-		170DD8A020AD385600644F1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 170DD84C20AD385600644F1D /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C395280C5EA4476843FF6644CE0ACEE4;
-			remoteInfo = "Pods-DepressiveDetectorTests";
-		};
-		170DD8A220AD385600644F1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 170DD84C20AD385600644F1D /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 04F51870BD335291EE89514E938B3E3C;
-			remoteInfo = "Pods-DepressiveDetectorUITests";
-		};
-		170DD8A420AD385600644F1D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 170DD84C20AD385600644F1D /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1267570C2A487989234D3246A66713B9;
-			remoteInfo = SwiftyJSON;
-		};
 		17771DCF20A0244E00F46855 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17771DAD20A0244C00F46855 /* Project object */;
@@ -134,77 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01A77B4686C3EB607B9CDB83 /* Pods_DepressiveDetectorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetectorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1193C03E8D744AA71832D1C9 /* Pods_DepressiveDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		16D302DA15DA2B0F0A0F7977 /* Pods_DepressiveDetectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetectorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		170DD84820AD385600644F1D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		170DD84A20AD385600644F1D /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		170DD84B20AD385600644F1D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		170DD84C20AD385600644F1D /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Pods.xcodeproj; sourceTree = "<group>"; };
-		170DD85020AD385600644F1D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		170DD85220AD385600644F1D /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
-		170DD85320AD385600644F1D /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
-		170DD85420AD385600644F1D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		170DD85520AD385600644F1D /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		170DD85620AD385600644F1D /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		170DD85720AD385600644F1D /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		170DD85820AD385600644F1D /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
-		170DD85920AD385600644F1D /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
-		170DD85A20AD385600644F1D /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		170DD85B20AD385600644F1D /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		170DD85C20AD385600644F1D /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		170DD85D20AD385600644F1D /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		170DD85E20AD385600644F1D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		170DD85F20AD385600644F1D /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		170DD86020AD385600644F1D /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
-		170DD86120AD385600644F1D /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		170DD86220AD385600644F1D /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
-		170DD86320AD385600644F1D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		170DD86620AD385600644F1D /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		170DD86720AD385600644F1D /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		170DD86820AD385600644F1D /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		170DD86920AD385600644F1D /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		170DD86A20AD385600644F1D /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		170DD86B20AD385600644F1D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		170DD86D20AD385600644F1D /* Alamofire-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		170DD86E20AD385600644F1D /* Alamofire.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		170DD86F20AD385600644F1D /* Alamofire-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		170DD87020AD385600644F1D /* Alamofire.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		170DD87120AD385600644F1D /* Alamofire-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		170DD87220AD385600644F1D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		170DD87420AD385600644F1D /* Pods-DepressiveDetectorUITests-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-DepressiveDetectorUITests-frameworks.sh"; sourceTree = "<group>"; };
-		170DD87520AD385600644F1D /* Pods-DepressiveDetectorUITests-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-DepressiveDetectorUITests-umbrella.h"; sourceTree = "<group>"; };
-		170DD87620AD385600644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-DepressiveDetectorUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		170DD87720AD385600644F1D /* Pods-DepressiveDetectorUITests-resources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-DepressiveDetectorUITests-resources.sh"; sourceTree = "<group>"; };
-		170DD87820AD385600644F1D /* Pods-DepressiveDetectorUITests-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pods-DepressiveDetectorUITests-dummy.m"; sourceTree = "<group>"; };
-		170DD87920AD385600644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Pods-DepressiveDetectorUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		170DD87A20AD385600644F1D /* Pods-DepressiveDetectorUITests.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DepressiveDetectorUITests.modulemap"; sourceTree = "<group>"; };
-		170DD87B20AD385600644F1D /* Pods-DepressiveDetectorUITests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-DepressiveDetectorUITests.release.xcconfig"; sourceTree = "<group>"; };
-		170DD87C20AD385600644F1D /* Pods-DepressiveDetectorUITests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-DepressiveDetectorUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		170DD87D20AD385600644F1D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		170DD87F20AD385600644F1D /* Pods-DepressiveDetectorTests-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-DepressiveDetectorTests-umbrella.h"; sourceTree = "<group>"; };
-		170DD88020AD385600644F1D /* Pods-DepressiveDetectorTests.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DepressiveDetectorTests.modulemap"; sourceTree = "<group>"; };
-		170DD88120AD385600644F1D /* Pods-DepressiveDetectorTests-acknowledgements.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Pods-DepressiveDetectorTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		170DD88220AD385600644F1D /* Pods-DepressiveDetectorTests-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-DepressiveDetectorTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		170DD88320AD385600644F1D /* Pods-DepressiveDetectorTests-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pods-DepressiveDetectorTests-dummy.m"; sourceTree = "<group>"; };
-		170DD88420AD385600644F1D /* Pods-DepressiveDetectorTests-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-DepressiveDetectorTests-frameworks.sh"; sourceTree = "<group>"; };
-		170DD88520AD385600644F1D /* Pods-DepressiveDetectorTests-resources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-DepressiveDetectorTests-resources.sh"; sourceTree = "<group>"; };
-		170DD88620AD385600644F1D /* Pods-DepressiveDetectorTests.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-DepressiveDetectorTests.debug.xcconfig"; sourceTree = "<group>"; };
-		170DD88720AD385600644F1D /* Pods-DepressiveDetectorTests.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-DepressiveDetectorTests.release.xcconfig"; sourceTree = "<group>"; };
-		170DD88820AD385600644F1D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		170DD88A20AD385600644F1D /* Pods-DepressiveDetector-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Pods-DepressiveDetector-acknowledgements.plist"; sourceTree = "<group>"; };
-		170DD88B20AD385600644F1D /* Pods-DepressiveDetector.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DepressiveDetector.modulemap"; sourceTree = "<group>"; };
-		170DD88C20AD385600644F1D /* Pods-DepressiveDetector.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-DepressiveDetector.debug.xcconfig"; sourceTree = "<group>"; };
-		170DD88D20AD385600644F1D /* Pods-DepressiveDetector.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Pods-DepressiveDetector.release.xcconfig"; sourceTree = "<group>"; };
-		170DD88E20AD385600644F1D /* Pods-DepressiveDetector-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pods-DepressiveDetector-umbrella.h"; sourceTree = "<group>"; };
-		170DD88F20AD385600644F1D /* Pods-DepressiveDetector-resources.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-DepressiveDetector-resources.sh"; sourceTree = "<group>"; };
-		170DD89020AD385600644F1D /* Pods-DepressiveDetector-acknowledgements.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Pods-DepressiveDetector-acknowledgements.markdown"; sourceTree = "<group>"; };
-		170DD89120AD385600644F1D /* Pods-DepressiveDetector-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pods-DepressiveDetector-dummy.m"; sourceTree = "<group>"; };
-		170DD89220AD385600644F1D /* Pods-DepressiveDetector-frameworks.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "Pods-DepressiveDetector-frameworks.sh"; sourceTree = "<group>"; };
-		170DD89320AD385600644F1D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		170DD89420AD385600644F1D /* Manifest.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Manifest.lock; sourceTree = "<group>"; };
-		170DD8A620AD385600644F1D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		170DD8A720AD385600644F1D /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		17771DB520A0244C00F46855 /* DepressiveDetector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepressiveDetector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17771DB820A0244C00F46855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17771DBB20A0244C00F46855 /* DepressiveDetector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DepressiveDetector.xcdatamodel; sourceTree = "<group>"; };
@@ -212,7 +51,6 @@
 		17771DBF20A0244C00F46855 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		17771DC220A0244C00F46855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17771DC720A0244E00F46855 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		17771DC920A0244E00F46855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17771DCE20A0244E00F46855 /* DepressiveDetectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DepressiveDetectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17771DD220A0244E00F46855 /* DepressiveDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepressiveDetectorTests.swift; sourceTree = "<group>"; };
 		17771DD420A0244E00F46855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,12 +62,15 @@
 		17C4B6C020A9947C00599E75 /* BarEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarEntry.swift; sourceTree = "<group>"; };
 		17C4B6C120A9947C00599E75 /* BasicBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicBarChart.swift; sourceTree = "<group>"; };
 		17C4B6C220A9947C00599E75 /* BeautifulBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeautifulBarChart.swift; sourceTree = "<group>"; };
-		1F82F43E6ABD53B13AC218EA /* Pods-DepressiveDetectorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorUITests/Pods-DepressiveDetectorUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2E13349620BD88F510BD0D3B /* Pods-DepressiveDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector.debug.xcconfig"; sourceTree = "<group>"; };
-		3756D303651141975ACDA35E /* Pods-DepressiveDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetector.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector.release.xcconfig"; sourceTree = "<group>"; };
-		834DB22F8FC5C9F04BD63EEC /* Pods-DepressiveDetectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorTests/Pods-DepressiveDetectorTests.debug.xcconfig"; sourceTree = "<group>"; };
-		93C58A8A115363582E59FAE2 /* Pods-DepressiveDetectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorTests/Pods-DepressiveDetectorTests.release.xcconfig"; sourceTree = "<group>"; };
-		BFD944FE634F4F3F5C7FF07E /* Pods-DepressiveDetectorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorUITests/Pods-DepressiveDetectorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3730002BF0C697F7D00F26A9 /* Pods-DepressiveDetectorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorUITests/Pods-DepressiveDetectorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		480AB88E5EDCD9C458C338AA /* Pods-DepressiveDetectorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorTests/Pods-DepressiveDetectorTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F4E4707128A3E67D703322F /* Pods-DepressiveDetectorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorUITests/Pods-DepressiveDetectorUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C789E27B53586504D082E8B /* Pods_DepressiveDetectorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetectorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2FC82DC3264C893795A569B /* Pods-DepressiveDetector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetector.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector.debug.xcconfig"; sourceTree = "<group>"; };
+		B83C3313AAE2116D6DF62B48 /* Pods_DepressiveDetectorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetectorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C12128AD4B47EAE8E350BC09 /* Pods-DepressiveDetectorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetectorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetectorTests/Pods-DepressiveDetectorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E437D9ED27DFB974CD3ECCF6 /* Pods-DepressiveDetector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DepressiveDetector.release.xcconfig"; path = "Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector.release.xcconfig"; sourceTree = "<group>"; };
+		E492415EBFA2F2583CEC8AEA /* Pods_DepressiveDetector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DepressiveDetector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06BAF61E8A1686B1DD3A10D6 /* Pods_DepressiveDetector.framework in Frameworks */,
+				BCB6F6B76796AE0F22191729 /* Pods_DepressiveDetector.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DAF5A3B7773FF3697E4C8B0 /* Pods_DepressiveDetectorTests.framework in Frameworks */,
+				D0205BD429BB8EB876441B11 /* Pods_DepressiveDetectorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,192 +94,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B53E397542C58ACC3C7CB024 /* Pods_DepressiveDetectorUITests.framework in Frameworks */,
+				1556CA1B974DB3FB9E2557D9 /* Pods_DepressiveDetectorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		170DD84620AD385600644F1D /* Pods */ = {
+		035091E40EDEDA2D804CB1B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				170DD84720AD385600644F1D /* SwiftyJSON */,
-				170DD84C20AD385600644F1D /* Pods.xcodeproj */,
-				170DD84F20AD385600644F1D /* Alamofire */,
-				170DD86420AD385600644F1D /* Target Support Files */,
-				170DD89420AD385600644F1D /* Manifest.lock */,
-				170DD89520AD385600644F1D /* Local Podspecs */,
-				170DD89620AD385600644F1D /* Headers */,
+				E492415EBFA2F2583CEC8AEA /* Pods_DepressiveDetector.framework */,
+				7C789E27B53586504D082E8B /* Pods_DepressiveDetectorTests.framework */,
+				B83C3313AAE2116D6DF62B48 /* Pods_DepressiveDetectorUITests.framework */,
 			);
-			path = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		170DD84720AD385600644F1D /* SwiftyJSON */ = {
+		075FF17FAF78AB1B39E57E28 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				170DD84820AD385600644F1D /* LICENSE */,
-				170DD84920AD385600644F1D /* Source */,
-				170DD84B20AD385600644F1D /* README.md */,
+				B2FC82DC3264C893795A569B /* Pods-DepressiveDetector.debug.xcconfig */,
+				E437D9ED27DFB974CD3ECCF6 /* Pods-DepressiveDetector.release.xcconfig */,
+				C12128AD4B47EAE8E350BC09 /* Pods-DepressiveDetectorTests.debug.xcconfig */,
+				480AB88E5EDCD9C458C338AA /* Pods-DepressiveDetectorTests.release.xcconfig */,
+				4F4E4707128A3E67D703322F /* Pods-DepressiveDetectorUITests.debug.xcconfig */,
+				3730002BF0C697F7D00F26A9 /* Pods-DepressiveDetectorUITests.release.xcconfig */,
 			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		170DD84920AD385600644F1D /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				170DD84A20AD385600644F1D /* SwiftyJSON.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		170DD84D20AD385600644F1D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				170DD89D20AD385600644F1D /* Alamofire.framework */,
-				170DD89F20AD385600644F1D /* Pods_DepressiveDetector.framework */,
-				170DD8A120AD385600644F1D /* Pods_DepressiveDetectorTests.framework */,
-				170DD8A320AD385600644F1D /* Pods_DepressiveDetectorUITests.framework */,
-				170DD8A520AD385600644F1D /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		170DD84F20AD385600644F1D /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				170DD85020AD385600644F1D /* LICENSE */,
-				170DD85120AD385600644F1D /* Source */,
-				170DD86320AD385600644F1D /* README.md */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		170DD85120AD385600644F1D /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				170DD85220AD385600644F1D /* TaskDelegate.swift */,
-				170DD85320AD385600644F1D /* MultipartFormData.swift */,
-				170DD85420AD385600644F1D /* NetworkReachabilityManager.swift */,
-				170DD85520AD385600644F1D /* Timeline.swift */,
-				170DD85620AD385600644F1D /* DispatchQueue+Alamofire.swift */,
-				170DD85720AD385600644F1D /* Result.swift */,
-				170DD85820AD385600644F1D /* ParameterEncoding.swift */,
-				170DD85920AD385600644F1D /* AFError.swift */,
-				170DD85A20AD385600644F1D /* Validation.swift */,
-				170DD85B20AD385600644F1D /* Notifications.swift */,
-				170DD85C20AD385600644F1D /* Response.swift */,
-				170DD85D20AD385600644F1D /* Alamofire.swift */,
-				170DD85E20AD385600644F1D /* Request.swift */,
-				170DD85F20AD385600644F1D /* SessionManager.swift */,
-				170DD86020AD385600644F1D /* ResponseSerialization.swift */,
-				170DD86120AD385600644F1D /* ServerTrustPolicy.swift */,
-				170DD86220AD385600644F1D /* SessionDelegate.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		170DD86420AD385600644F1D /* Target Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				170DD86520AD385600644F1D /* SwiftyJSON */,
-				170DD86C20AD385600644F1D /* Alamofire */,
-				170DD87320AD385600644F1D /* Pods-DepressiveDetectorUITests */,
-				170DD87E20AD385600644F1D /* Pods-DepressiveDetectorTests */,
-				170DD88920AD385600644F1D /* Pods-DepressiveDetector */,
-			);
-			path = "Target Support Files";
-			sourceTree = "<group>";
-		};
-		170DD86520AD385600644F1D /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				170DD86620AD385600644F1D /* SwiftyJSON.modulemap */,
-				170DD86720AD385600644F1D /* SwiftyJSON-umbrella.h */,
-				170DD86820AD385600644F1D /* SwiftyJSON-prefix.pch */,
-				170DD86920AD385600644F1D /* SwiftyJSON-dummy.m */,
-				170DD86A20AD385600644F1D /* SwiftyJSON.xcconfig */,
-				170DD86B20AD385600644F1D /* Info.plist */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		170DD86C20AD385600644F1D /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				170DD86D20AD385600644F1D /* Alamofire-dummy.m */,
-				170DD86E20AD385600644F1D /* Alamofire.xcconfig */,
-				170DD86F20AD385600644F1D /* Alamofire-umbrella.h */,
-				170DD87020AD385600644F1D /* Alamofire.modulemap */,
-				170DD87120AD385600644F1D /* Alamofire-prefix.pch */,
-				170DD87220AD385600644F1D /* Info.plist */,
-			);
-			path = Alamofire;
-			sourceTree = "<group>";
-		};
-		170DD87320AD385600644F1D /* Pods-DepressiveDetectorUITests */ = {
-			isa = PBXGroup;
-			children = (
-				170DD87420AD385600644F1D /* Pods-DepressiveDetectorUITests-frameworks.sh */,
-				170DD87520AD385600644F1D /* Pods-DepressiveDetectorUITests-umbrella.h */,
-				170DD87620AD385600644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.plist */,
-				170DD87720AD385600644F1D /* Pods-DepressiveDetectorUITests-resources.sh */,
-				170DD87820AD385600644F1D /* Pods-DepressiveDetectorUITests-dummy.m */,
-				170DD87920AD385600644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.markdown */,
-				170DD87A20AD385600644F1D /* Pods-DepressiveDetectorUITests.modulemap */,
-				170DD87B20AD385600644F1D /* Pods-DepressiveDetectorUITests.release.xcconfig */,
-				170DD87C20AD385600644F1D /* Pods-DepressiveDetectorUITests.debug.xcconfig */,
-				170DD87D20AD385600644F1D /* Info.plist */,
-			);
-			path = "Pods-DepressiveDetectorUITests";
-			sourceTree = "<group>";
-		};
-		170DD87E20AD385600644F1D /* Pods-DepressiveDetectorTests */ = {
-			isa = PBXGroup;
-			children = (
-				170DD87F20AD385600644F1D /* Pods-DepressiveDetectorTests-umbrella.h */,
-				170DD88020AD385600644F1D /* Pods-DepressiveDetectorTests.modulemap */,
-				170DD88120AD385600644F1D /* Pods-DepressiveDetectorTests-acknowledgements.markdown */,
-				170DD88220AD385600644F1D /* Pods-DepressiveDetectorTests-acknowledgements.plist */,
-				170DD88320AD385600644F1D /* Pods-DepressiveDetectorTests-dummy.m */,
-				170DD88420AD385600644F1D /* Pods-DepressiveDetectorTests-frameworks.sh */,
-				170DD88520AD385600644F1D /* Pods-DepressiveDetectorTests-resources.sh */,
-				170DD88620AD385600644F1D /* Pods-DepressiveDetectorTests.debug.xcconfig */,
-				170DD88720AD385600644F1D /* Pods-DepressiveDetectorTests.release.xcconfig */,
-				170DD88820AD385600644F1D /* Info.plist */,
-			);
-			path = "Pods-DepressiveDetectorTests";
-			sourceTree = "<group>";
-		};
-		170DD88920AD385600644F1D /* Pods-DepressiveDetector */ = {
-			isa = PBXGroup;
-			children = (
-				170DD88A20AD385600644F1D /* Pods-DepressiveDetector-acknowledgements.plist */,
-				170DD88B20AD385600644F1D /* Pods-DepressiveDetector.modulemap */,
-				170DD88C20AD385600644F1D /* Pods-DepressiveDetector.debug.xcconfig */,
-				170DD88D20AD385600644F1D /* Pods-DepressiveDetector.release.xcconfig */,
-				170DD88E20AD385600644F1D /* Pods-DepressiveDetector-umbrella.h */,
-				170DD88F20AD385600644F1D /* Pods-DepressiveDetector-resources.sh */,
-				170DD89020AD385600644F1D /* Pods-DepressiveDetector-acknowledgements.markdown */,
-				170DD89120AD385600644F1D /* Pods-DepressiveDetector-dummy.m */,
-				170DD89220AD385600644F1D /* Pods-DepressiveDetector-frameworks.sh */,
-				170DD89320AD385600644F1D /* Info.plist */,
-			);
-			path = "Pods-DepressiveDetector";
-			sourceTree = "<group>";
-		};
-		170DD89520AD385600644F1D /* Local Podspecs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Local Podspecs";
-			sourceTree = "<group>";
-		};
-		170DD89620AD385600644F1D /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Headers;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		17771DAC20A0244C00F46855 = {
@@ -448,8 +131,8 @@
 				17771DD120A0244E00F46855 /* DepressiveDetectorTests */,
 				17771DDC20A0244E00F46855 /* DepressiveDetectorUITests */,
 				17771DB620A0244C00F46855 /* Products */,
-				2AADA83103319D0647A6F4E0 /* Pods */,
-				4685DB2082915C76C1FEDA8E /* Frameworks */,
+				075FF17FAF78AB1B39E57E28 /* Pods */,
+				035091E40EDEDA2D804CB1B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -474,7 +157,6 @@
 				17A35B1F20A0546F00532940 /* ChildViewController.swift */,
 				17771DC120A0244C00F46855 /* Main.storyboard */,
 				17771DC620A0244E00F46855 /* LaunchScreen.storyboard */,
-				17771DC920A0244E00F46855 /* Info.plist */,
 				17771DEB20A027FD00F46855 /* Media.xcassets */,
 			);
 			path = DepressiveDetector;
@@ -508,32 +190,6 @@
 			name = BarChart;
 			sourceTree = "<group>";
 		};
-		2AADA83103319D0647A6F4E0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2E13349620BD88F510BD0D3B /* Pods-DepressiveDetector.debug.xcconfig */,
-				3756D303651141975ACDA35E /* Pods-DepressiveDetector.release.xcconfig */,
-				834DB22F8FC5C9F04BD63EEC /* Pods-DepressiveDetectorTests.debug.xcconfig */,
-				93C58A8A115363582E59FAE2 /* Pods-DepressiveDetectorTests.release.xcconfig */,
-				170DD8A620AD385600644F1D /* Podfile */,
-				170DD8A720AD385600644F1D /* Podfile.lock */,
-				170DD84620AD385600644F1D /* Pods */,
-				BFD944FE634F4F3F5C7FF07E /* Pods-DepressiveDetectorUITests.debug.xcconfig */,
-				1F82F43E6ABD53B13AC218EA /* Pods-DepressiveDetectorUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4685DB2082915C76C1FEDA8E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1193C03E8D744AA71832D1C9 /* Pods_DepressiveDetector.framework */,
-				16D302DA15DA2B0F0A0F7977 /* Pods_DepressiveDetectorTests.framework */,
-				01A77B4686C3EB607B9CDB83 /* Pods_DepressiveDetectorUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -545,7 +201,7 @@
 				17771DB120A0244C00F46855 /* Sources */,
 				17771DB220A0244C00F46855 /* Frameworks */,
 				17771DB320A0244C00F46855 /* Resources */,
-				7AB350175EA4A73AD9E8BA8B /* [CP] Embed Pods Frameworks */,
+				F50B67ED03E48DADA6DE1754 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -628,12 +284,6 @@
 			mainGroup = 17771DAC20A0244C00F46855;
 			productRefGroup = 17771DB620A0244C00F46855 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 170DD84D20AD385600644F1D /* Products */;
-					ProjectRef = 170DD84C20AD385600644F1D /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				17771DB420A0244C00F46855 /* DepressiveDetector */,
@@ -643,84 +293,14 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		170DD89D20AD385600644F1D /* Alamofire.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Alamofire.framework;
-			remoteRef = 170DD89C20AD385600644F1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		170DD89F20AD385600644F1D /* Pods_DepressiveDetector.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_DepressiveDetector.framework;
-			remoteRef = 170DD89E20AD385600644F1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		170DD8A120AD385600644F1D /* Pods_DepressiveDetectorTests.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_DepressiveDetectorTests.framework;
-			remoteRef = 170DD8A020AD385600644F1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		170DD8A320AD385600644F1D /* Pods_DepressiveDetectorUITests.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Pods_DepressiveDetectorUITests.framework;
-			remoteRef = 170DD8A220AD385600644F1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		170DD8A520AD385600644F1D /* SwiftyJSON.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftyJSON.framework;
-			remoteRef = 170DD8A420AD385600644F1D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		17771DB320A0244C00F46855 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170DD8DD20AD385700644F1D /* Podfile in Resources */,
-				170DD8D520AD385700644F1D /* Pods-DepressiveDetector.debug.xcconfig in Resources */,
-				170DD8AB20AD385700644F1D /* LICENSE in Resources */,
-				170DD8D420AD385700644F1D /* Pods-DepressiveDetector-acknowledgements.plist in Resources */,
 				17771DC820A0244E00F46855 /* LaunchScreen.storyboard in Resources */,
-				170DD8CB20AD385700644F1D /* Info.plist in Resources */,
-				170DD8DA20AD385700644F1D /* Pods-DepressiveDetector-frameworks.sh in Resources */,
-				170DD8C620AD385700644F1D /* Pods-DepressiveDetectorUITests-resources.sh in Resources */,
-				170DD8C020AD385700644F1D /* Info.plist in Resources */,
-				170DD8D220AD385700644F1D /* Pods-DepressiveDetectorTests.release.xcconfig in Resources */,
-				170DD8CC20AD385700644F1D /* Pods-DepressiveDetectorTests-acknowledgements.markdown in Resources */,
-				170DD8D620AD385700644F1D /* Pods-DepressiveDetector.release.xcconfig in Resources */,
-				170DD8C420AD385700644F1D /* Pods-DepressiveDetectorUITests-frameworks.sh in Resources */,
-				170DD8D120AD385700644F1D /* Pods-DepressiveDetectorTests.debug.xcconfig in Resources */,
-				170DD8C920AD385700644F1D /* Pods-DepressiveDetectorUITests.release.xcconfig in Resources */,
-				170DD8D820AD385700644F1D /* Pods-DepressiveDetector-acknowledgements.markdown in Resources */,
-				170DD8DC20AD385700644F1D /* Manifest.lock in Resources */,
-				170DD8BF20AD385700644F1D /* SwiftyJSON.xcconfig in Resources */,
-				170DD8DB20AD385700644F1D /* Info.plist in Resources */,
-				170DD8CF20AD385700644F1D /* Pods-DepressiveDetectorTests-frameworks.sh in Resources */,
-				170DD8C820AD385700644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.markdown in Resources */,
 				17771DEC20A027FD00F46855 /* Media.xcassets in Resources */,
-				170DD8BD20AD385700644F1D /* README.md in Resources */,
-				170DD8AA20AD385700644F1D /* README.md in Resources */,
-				170DD8C220AD385700644F1D /* Alamofire.xcconfig in Resources */,
-				170DD8C320AD385700644F1D /* Info.plist in Resources */,
-				170DD8A820AD385700644F1D /* LICENSE in Resources */,
-				170DD8DE20AD385700644F1D /* Podfile.lock in Resources */,
-				170DD8C520AD385700644F1D /* Pods-DepressiveDetectorUITests-acknowledgements.plist in Resources */,
-				170DD8D020AD385700644F1D /* Pods-DepressiveDetectorTests-resources.sh in Resources */,
-				170DD8D720AD385700644F1D /* Pods-DepressiveDetector-resources.sh in Resources */,
 				17771DC320A0244C00F46855 /* Main.storyboard in Resources */,
-				170DD8CA20AD385700644F1D /* Pods-DepressiveDetectorUITests.debug.xcconfig in Resources */,
-				170DD8D320AD385700644F1D /* Info.plist in Resources */,
-				170DD8CD20AD385700644F1D /* Pods-DepressiveDetectorTests-acknowledgements.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,7 +339,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7AB350175EA4A73AD9E8BA8B /* [CP] Embed Pods Frameworks */ = {
+		BF93F40F31CBA4F599BCB194 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DepressiveDetector-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F50B67ED03E48DADA6DE1754 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -777,24 +375,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DepressiveDetector/Pods-DepressiveDetector-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BF93F40F31CBA4F599BCB194 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DepressiveDetector-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F740619707C24CBF8FBC2C17 /* [CP] Check Pods Manifest.lock */ = {
@@ -822,36 +402,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				170DD8B520AD385700644F1D /* Notifications.swift in Sources */,
 				17EC9F1A20A9A6760013F19E /* Media.xcassets in Sources */,
 				17EC9F1620A9A6660013F19E /* BarEntry.swift in Sources */,
-				170DD8BC20AD385700644F1D /* SessionDelegate.swift in Sources */,
 				17EC9F1720A9A6660013F19E /* BasicBarChart.swift in Sources */,
-				170DD8A920AD385700644F1D /* SwiftyJSON.swift in Sources */,
-				170DD8BB20AD385700644F1D /* ServerTrustPolicy.swift in Sources */,
 				17EC9F1820A9A6660013F19E /* BeautifulBarChart.swift in Sources */,
-				170DD8AE20AD385700644F1D /* NetworkReachabilityManager.swift in Sources */,
-				170DD8B120AD385700644F1D /* Result.swift in Sources */,
-				170DD8D920AD385700644F1D /* Pods-DepressiveDetector-dummy.m in Sources */,
-				170DD8CE20AD385700644F1D /* Pods-DepressiveDetectorTests-dummy.m in Sources */,
-				170DD8B820AD385700644F1D /* Request.swift in Sources */,
-				170DD8B720AD385700644F1D /* Alamofire.swift in Sources */,
-				170DD8C720AD385700644F1D /* Pods-DepressiveDetectorUITests-dummy.m in Sources */,
-				170DD8B220AD385700644F1D /* ParameterEncoding.swift in Sources */,
 				17771DB920A0244C00F46855 /* AppDelegate.swift in Sources */,
-				170DD8BE20AD385700644F1D /* SwiftyJSON-dummy.m in Sources */,
-				170DD8AD20AD385700644F1D /* MultipartFormData.swift in Sources */,
-				170DD8BA20AD385700644F1D /* ResponseSerialization.swift in Sources */,
-				170DD8AF20AD385700644F1D /* Timeline.swift in Sources */,
-				170DD8B920AD385700644F1D /* SessionManager.swift in Sources */,
-				170DD8B320AD385700644F1D /* AFError.swift in Sources */,
-				170DD8B620AD385700644F1D /* Response.swift in Sources */,
 				17A35B2020A0546F00532940 /* ChildViewController.swift in Sources */,
-				170DD8B420AD385700644F1D /* Validation.swift in Sources */,
 				17771DBC20A0244C00F46855 /* DepressiveDetector.xcdatamodeld in Sources */,
-				170DD8AC20AD385700644F1D /* TaskDelegate.swift in Sources */,
-				170DD8B020AD385700644F1D /* DispatchQueue+Alamofire.swift in Sources */,
-				170DD8C120AD385700644F1D /* Alamofire-dummy.m in Sources */,
 				17771DBE20A0244C00F46855 /* MasterViewController.swift in Sources */,
 				17771DC020A0244C00F46855 /* DetailViewController.swift in Sources */,
 			);
@@ -1024,7 +581,7 @@
 		};
 		17771DE320A0244E00F46855 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E13349620BD88F510BD0D3B /* Pods-DepressiveDetector.debug.xcconfig */;
+			baseConfigurationReference = B2FC82DC3264C893795A569B /* Pods-DepressiveDetector.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1043,7 +600,7 @@
 		};
 		17771DE420A0244E00F46855 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3756D303651141975ACDA35E /* Pods-DepressiveDetector.release.xcconfig */;
+			baseConfigurationReference = E437D9ED27DFB974CD3ECCF6 /* Pods-DepressiveDetector.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1062,7 +619,7 @@
 		};
 		17771DE620A0244E00F46855 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 834DB22F8FC5C9F04BD63EEC /* Pods-DepressiveDetectorTests.debug.xcconfig */;
+			baseConfigurationReference = C12128AD4B47EAE8E350BC09 /* Pods-DepressiveDetectorTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1084,7 +641,7 @@
 		};
 		17771DE720A0244E00F46855 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93C58A8A115363582E59FAE2 /* Pods-DepressiveDetectorTests.release.xcconfig */;
+			baseConfigurationReference = 480AB88E5EDCD9C458C338AA /* Pods-DepressiveDetectorTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1106,7 +663,7 @@
 		};
 		17771DE920A0244E00F46855 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFD944FE634F4F3F5C7FF07E /* Pods-DepressiveDetectorUITests.debug.xcconfig */;
+			baseConfigurationReference = 4F4E4707128A3E67D703322F /* Pods-DepressiveDetectorUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1127,7 +684,7 @@
 		};
 		17771DEA20A0244E00F46855 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F82F43E6ABD53B13AC218EA /* Pods-DepressiveDetectorUITests.release.xcconfig */;
+			baseConfigurationReference = 3730002BF0C697F7D00F26A9 /* Pods-DepressiveDetectorUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

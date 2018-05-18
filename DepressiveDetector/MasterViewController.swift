@@ -52,16 +52,19 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         return UIImage(contentsOfFile: fileURL.path)
     }
 
+    //View Will Appear
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
 
+    //Did Receive Memory Warning
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    //Insert New Child for Table View Cell
     @objc
     func insertNewObject(_ sender: Any) {
         //Go to Child Detail scene
@@ -70,6 +73,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.present(newViewController, animated: true, completion: nil)
     }
 
+    
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -114,7 +118,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120;
+        return 120; //set height of row
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -136,7 +140,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func configureCell(_ cell: UITableViewCell, withEvent child: Child) {
         //Set cell title and subtitle
         cell.textLabel?.text = child.name
-        cell.detailTextLabel?.text = child.twitterAccount
+        cell.detailTextLabel?.text = "\(child.twitterSinceID)"//child.twitterUserID
         if let imageName = child.imageName {
             if imageName != "" {
                 let imageCell = getImage(ImageName: imageName)

@@ -75,8 +75,9 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             let context = appDelegate.persistentContainer.viewContext
             let entity = NSEntityDescription.entity(forEntityName: "Child", in: context)
             let newChild = NSManagedObject(entity: entity!, insertInto: context)
+            //save name and twitterUserID
             newChild.setValue(name.text, forKey: "name")
-            newChild.setValue(twitter.text, forKey: "twitterAccount")
+            newChild.setValue(twitter.text, forKey: "twitterUserID")
             //add save information for image
             if childImage.image != nil {
                 var newImage = childImage.image
@@ -86,13 +87,14 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
                 //NSLog("childImageName: "+"\(randomName)") //only for test
                 saveImageforChild(image: newImage!, fileName: randomName) //childImage.image!
                 newChild.setValue(randomName, forKey: "imageName")
-                 //NSLog("having Child Image") //only for testing
             } else{
                 //add codes for save nil image metadata in database
                  //NSLog("no Child Image") //only for testing
                 newChild.setValue("", forKey: "imageName")
             }
-        
+            //save other attributes as initial values
+            newChild.setValue(0, forKey: "twitterSinceID")
+            newChild.setValue(Date(), forKey: "lastAccessDate")
 
             // Save the context.
             do {
@@ -115,8 +117,6 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             twitter.text = ""
             twitterAccount.isHidden = true
             twitterAccount.text = ""
-            //continue on image selector
-            ////////////////////////////////////
             
             //go back
             self.dismiss(animated: true, completion: nil)
@@ -179,8 +179,6 @@ class ChildViewController: UIViewController, UIImagePickerControllerDelegate, UI
             twitterAccount.text = ""
             twitter.isHidden = false //enable textfield
             twitter.text = ""
-            
-            //continue on image selector
         }
     }
     
