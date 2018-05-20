@@ -146,7 +146,10 @@ class DetailViewController: UIViewController{
         var result: [BarEntry] = []
         //add code for retrieve days of risks from database
         //add code for determine if dates of stored risks are less than days
-        let risk = [0.5, 0.4, -0.6, -0.2, 0.7, -0.6, -0.9, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4, 0.1, -0.2, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4] //get risks from database
+        //let risk = [0.5, 0.4, -0.6, -0.2, 0.7, -0.6, -0.9, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4, 0.1, -0.2, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4] //get risks from database
+        var risks: [(Date, Float)]
+        risks = getRisks(name: (currentChild?.name)!)
+        let risk = risks.
         for i in 0..<days {
             let value = risk[i] * 100 // time by 100 to indicate the content of risk
             let height: Float = Float(abs(value)) / 100  //justify the value of height
@@ -335,6 +338,32 @@ class DetailViewController: UIViewController{
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
+    }
+    
+    //Get Information of Risk in database
+    func getRisks(name: String) -> Dictionary<Date, Float>{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Risk")
+        
+        fetchRequest.predicate = NSPredicate(format: "childName == %@", argumentArray: [name])
+        
+        var risks: Dictionary<Date, Float> = [:]
+        do {
+            let results = try context.fetch(fetchRequest) as? [NSManagedObject]
+            if results?.count != 0 { // Atleast one was returned
+                
+                for n in 0..<(results!.count){
+                    let date = results![n].value(forKey: "postDate")
+                    let risk = results![n].value(forKey: "score")
+                    risks.updateValue(risk as! Float, forKey: date as! Date)
+                }
+            }
+        } catch {
+            print("Fetch Failed in Risk: \(error)")
+        }
+        let newrisks = risks.sorted(by: <#T##((key: Date, value: Float), (key: Date, value: Float)) throws -> Bool#>)
+        return newrisks
     }
     
     //Save Information of Child in database
