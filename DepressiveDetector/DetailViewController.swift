@@ -51,10 +51,22 @@ class DetailViewController: UIViewController{
                 label.text?.append(child.name!) //add child name for title 
             }
         }
-        
+    }
+    
+    func drawChart(){
+        //Draw chart
+        let dataEntries = generateDataEntries(days: 30) //series for a month
+        let dataEntries2 = generateDataEntries(days: 7)  // series for a week
+        //Set data series for up chart with data in a week
+        chart.dataEntries = dataEntries //below chart
+        chart2.dataEntries = dataEntries2 //up chart
+    }
+    
+    func configureMoodPanel(){
         //Display current mood
         if let mood = currentChild?.currentMood {
-            leftLabel?.text = "\(mood)"
+            let moodInt = Int(mood * 100)
+            leftLabel?.text = "\(moodInt)"
             switch mood {
             case 0.0 ..< 0.3:
                 leftImage?.image = #imageLiteral(resourceName: "face4")
@@ -125,60 +137,9 @@ class DetailViewController: UIViewController{
                 middleLabel?.textColor = UIColor.red
             }
         }
-       
-        
-        
-    }
-    
-    func drawChart(){
-        //Draw chart
-        let dataEntries = generateDataEntries(days: 30) //series for a month
-        let dataEntries2 = generateDataEntries(days: 7)  // series for a week
-        //Set data series for up chart with data in a week
-        chart.dataEntries = dataEntries //below chart
-        chart2.dataEntries = dataEntries2 //up chart
     }
     
     
-    func generateDataEntries(days: Int) -> [BarEntry] {
-        //colors for bar
-        let colors = [UIColor.red, UIColor(displayP3Red: 0.17, green: 0.58, blue: 0.17, alpha: 1.0)]
-        var result: [BarEntry] = []
-        
-        //add code for retrieve days of risks from database
-        //add code for determine if dates of stored risks are less than days
-        //let risk = [0.5, 0.4, -0.6, -0.2, 0.7, -0.6, -0.9, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4, 0.1, -0.2, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4] //get risks from database
-        let risks = getRisks(name: (currentChild?.name)!)
-        
-        var risk: [Float] = []
-        var date: [Date] = []
-        //get all available (date, risk)
-        for i in 0..<risks.count{
-            date.append(risks[i].0)
-            risk.append(risks[i].1)
-        }
-        
-        //check if days is less than required
-        var newdays = days
-        if days > risks.count {
-            newdays = risks.count
-        }
-        
-        for i in 0..<newdays {
-            let value = Int(risk[i] * 100) // time by 100 to indicate the content of risk
-            let height: Float = Float(abs(value)) / 100  //justify the value of height
-            
-            let formatter = DateFormatter()
-            formatter.dateFormat = "d MMM" //display date format
-            //date.addTimeInterval(TimeInterval(24*60*60*i)) //add date for every risk
-            
-            var x:Int  = 1
-            if (value != abs(value)) {x = 0} //determine if risk is red color
-            
-            result.append(BarEntry(color: colors[x], height: height, textValue: "\(value)", title: formatter.string(from: date[i])))
-        }
-        return result
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -197,6 +158,9 @@ class DetailViewController: UIViewController{
         
         //draw the charts
         drawChart()
+        
+        //set mood panel
+        configureMoodPanel()
     }
     
     //Transition Display
@@ -222,7 +186,89 @@ class DetailViewController: UIViewController{
         }
     }
     
-
+    
+    
+    func generateDataEntries(days: Int) -> [BarEntry] {
+        //colors for bar
+        let colors = [UIColor.red, UIColor(displayP3Red: 0.17, green: 0.58, blue: 0.17, alpha: 1.0)]
+        var result: [BarEntry] = []
+        
+        //add code for retrieve days of risks from database
+        //add code for determine if dates of stored risks are less than days
+        //let risk = [0.5, 0.4, -0.6, -0.2, 0.7, -0.6, -0.9, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4, 0.1, -0.2, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4] //get risks from database
+        let risks = getRisks(name: (currentChild?.name)!)
+        
+        var risk: [Float] = []
+        var date: [Date] = []
+        //get all available (date, risk)
+        for i in 0..<risks.count{
+            date.append(risks[i].0)
+            risk.append(risks[i].1)
+        }
+        
+        //check if need an alert
+        //set value of current mood
+        //set value of twitter days
+        checkifAlert(risk: risk, date: date)
+        
+        
+        //check if days is less than required
+        var newdays = days
+        if days > risks.count {
+            newdays = risks.count
+        }
+        
+        for i in 0..<newdays {
+            let value = Int(risk[i] * 100) // time by 100 to indicate the content of risk
+            let height: Float = Float(abs(value)) / 100  //justify the value of height
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "d MMM" //display date format
+            //date.addTimeInterval(TimeInterval(24*60*60*i)) //add date for every risk
+            
+            var x:Int  = 1
+            if (value != abs(value)) {x = 0} //determine if risk is red color
+            
+            result.append(BarEntry(color: colors[x], height: height, textValue: "\(value)", title: formatter.string(from: date[i])))
+        }
+        return result
+    }
+    
+    
+    //check if need an alert
+    //set value of current mood
+    //set value of twitter days
+    func checkifAlert(risk: [Float], date: [Date]) -> Void {
+        var currentMood: Float = 0.0
+        var risksCount:Int = 0 //how many risks in one day
+        for i in 0..<risk.count {
+            if date[0] <= Date(timeInterval: 86400, since: date[i]){
+                currentMood += risk[i]
+                risksCount += 1
+            } else {
+                break
+            }
+        }
+        //set currentMood in Child
+        currentChild?.currentMood = currentMood / Float(risksCount)
+        
+        //calculate how many days away today
+        let days = Calendar.current.dateComponents([.day], from: date[0] , to: Date()).day!
+        currentChild?.twitterMissingDays = Int16(days)
+        
+        //calculate if need alert
+        //alert algorithm
+        //need to be replaced after demo
+        if risk.count >= 3 {
+            if (risk[0]<0 && risk[1]<0 && risk[2]<0){
+                currentChild?.ifAlert = true
+            } else {
+                currentChild?.ifAlert = false
+            }
+        } else {
+            currentChild?.ifAlert = false
+        }
+    }
     
 
     //Google ML Cloud Service Access Token Set and Get Risks from Google Analysis
