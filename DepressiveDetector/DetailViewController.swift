@@ -141,26 +141,41 @@ class DetailViewController: UIViewController{
     
     
     func generateDataEntries(days: Int) -> [BarEntry] {
-        //NSLog("\(String(describing: currentChild?.name))") //only for test
+        //colors for bar
         let colors = [UIColor.red, UIColor(displayP3Red: 0.17, green: 0.58, blue: 0.17, alpha: 1.0)]
         var result: [BarEntry] = []
+        
         //add code for retrieve days of risks from database
         //add code for determine if dates of stored risks are less than days
         //let risk = [0.5, 0.4, -0.6, -0.2, 0.7, -0.6, -0.9, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4, 0.1, -0.2, 0.3, -0.4, 0.5, -0.6,0.7, -0.8, 0.9, -1.0, 0.1, -0.2, 0.3, -0.4] //get risks from database
-        var risks: [(Date, Float)]
-        risks = getRisks(name: (currentChild?.name)!)
-        let risk = risks.
-        for i in 0..<days {
-            let value = risk[i] * 100 // time by 100 to indicate the content of risk
+        let risks = getRisks(name: (currentChild?.name)!)
+        
+        var risk: [Float] = []
+        var date: [Date] = []
+        //get all available (date, risk)
+        for i in 0..<risks.count{
+            date.append(risks[i].0)
+            risk.append(risks[i].1)
+        }
+        
+        //check if days is less than required
+        var newdays = days
+        if days > risks.count {
+            newdays = risks.count
+        }
+        
+        for i in 0..<newdays {
+            let value = Int(risk[i] * 100) // time by 100 to indicate the content of risk
             let height: Float = Float(abs(value)) / 100  //justify the value of height
             
             let formatter = DateFormatter()
             formatter.dateFormat = "d MMM" //display date format
-            var date = Date()
-            date.addTimeInterval(TimeInterval(24*60*60*i)) //add date for every risk
+            //date.addTimeInterval(TimeInterval(24*60*60*i)) //add date for every risk
+            
             var x:Int  = 1
             if (value != abs(value)) {x = 0} //determine if risk is red color
-            result.append(BarEntry(color: colors[x], height: height, textValue: "\(value)", title: formatter.string(from: date)))
+            
+            result.append(BarEntry(color: colors[x], height: height, textValue: "\(value)", title: formatter.string(from: date[i])))
         }
         return result
     }
@@ -175,9 +190,9 @@ class DetailViewController: UIViewController{
         // retrieveTwitter(twitterId:userID,sinceId: "983456300179783680")
         // retrieveTwitter(twitterId:userID,sinceId:nil)
         if (currentChild?.twitterSinceID == 0) {
-            //retrieveTwitter(twitterId: (currentChild?.twitterUserID)!,sinceId: nil)
+            retrieveTwitter(twitterId: (currentChild?.twitterUserID)!,sinceId: nil)
         } else {
-            //retrieveTwitter(twitterId:  (currentChild?.twitterUserID)!,sinceId: "\( (currentChild?.twitterSinceID)!)")
+            retrieveTwitter(twitterId:  (currentChild?.twitterUserID)!,sinceId: "\( (currentChild?.twitterSinceID)!)")
         }
         
         //draw the charts
@@ -341,14 +356,16 @@ class DetailViewController: UIViewController{
     }
     
     //Get Information of Risk in database
-    func getRisks(name: String) -> Dictionary<Date, Float>{
+    //Sort and Return a Array
+    //Current Date First
+    func getRisks(name: String) -> [(Date, Float)]{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Risk")
         
         fetchRequest.predicate = NSPredicate(format: "childName == %@", argumentArray: [name])
         
-        var risks: Dictionary<Date, Float> = [:]
+        var risks = [Date: Float]()
         do {
             let results = try context.fetch(fetchRequest) as? [NSManagedObject]
             if results?.count != 0 { // Atleast one was returned
@@ -362,7 +379,11 @@ class DetailViewController: UIViewController{
         } catch {
             print("Fetch Failed in Risk: \(error)")
         }
-        let newrisks = risks.sorted(by: <#T##((key: Date, value: Float), (key: Date, value: Float)) throws -> Bool#>)
+        let newrisks = risks.sorted { firstDictionary, secondDictionary in
+            let firstKey = firstDictionary.0
+            let secondKey = secondDictionary.0
+            return firstKey > secondKey
+        }
         return newrisks
     }
     
