@@ -103,9 +103,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let child = fetchedResultsController.object(at: indexPath)
-        //Configure cell background
-        cell.backgroundColor = generateRandomColor()
-    
+        
         //Configure a cell
         configureCell(cell, withEvent: child)
         
@@ -140,7 +138,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func configureCell(_ cell: UITableViewCell, withEvent child: Child) {
         //Set cell title and subtitle
         cell.textLabel?.text = child.name
-        cell.detailTextLabel?.text = "\(child.twitterSinceID)"//child.twitterUserID
+        cell.detailTextLabel?.text = child.twitterUserID //only for test"\(child.twitterSinceID)"
+        
+        //Set cell text color
+        cell.textLabel?.textColor = UIColor.blue
+        cell.detailTextLabel?.textColor = UIColor.blue
+        
+        //Set cell image
         if let imageName = child.imageName {
             if imageName != "" {
                 let imageCell = getImage(ImageName: imageName)
@@ -149,6 +153,34 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                 cell.imageView!.image = #imageLiteral(resourceName: "child") //set default child image for table cell
             }
         }
+        
+        //Configure cell background
+        if (child.ifAlert) {
+            //Alert color at Red
+            cell.backgroundColor = UIColor.red
+            cell.textLabel?.textColor = UIColor.white
+            cell.detailTextLabel?.textColor = UIColor.white
+        } else {
+            //From calm green to a bit noise yellow to indicate the current mood change
+            switch child.currentMood {
+            case 0.0 ..< 0.3:
+                cell.backgroundColor = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 0.4475064212)
+            case 0.3 ..< 0.6:
+                cell.backgroundColor = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 0.6980950342)
+            case 0.6 ..< 1.1:
+                cell.backgroundColor = #colorLiteral(red: 0, green: 1, blue: 0, alpha: 1)
+            case -0.3 ..< 0.0:
+                cell.backgroundColor = #colorLiteral(red: 0.9638697505, green: 1, blue: 0, alpha: 0.4508240582)
+            case -0.6 ..< -0.3:
+                cell.backgroundColor = #colorLiteral(red: 0.9638697505, green: 1, blue: 0, alpha: 0.6990047089)
+            case -1.1 ..< -0.6:
+                cell.backgroundColor = #colorLiteral(red: 0.9638697505, green: 1, blue: 0, alpha: 1)
+            default:
+                NSLog("currentMood(-1~1) in Alert of database is in a wrong range")
+                cell.backgroundColor = generateRandomColor()
+            }
+        }
+        
     }
 
     // MARK: - Fetched results controller
@@ -226,7 +258,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         let saturation : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from white
         let brightness : CGFloat = CGFloat(arc4random() % 128) / 256 + 0.5 // from 0.5 to 1.0 to stay away from black
         
-        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 0.3)
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 0.2)
     }
 
     /*
