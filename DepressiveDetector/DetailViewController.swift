@@ -209,8 +209,9 @@ class DetailViewController: UIViewController{
         //check if need an alert
         //set value of current mood
         //set value of twitter days
-        checkifAlert(risk: risk, date: date)
-        
+        if risk != [] {
+            checkifAlert(risk: risk, date: date)
+        }
         
         //check if days is less than required
         var newdays = days
@@ -255,6 +256,7 @@ class DetailViewController: UIViewController{
         //calculate how many days away today
         let days = Calendar.current.dateComponents([.day], from: date[0] , to: Date()).day!
         currentChild?.twitterMissingDays = Int16(days)
+        
         
         //calculate if need alert
         //alert algorithm
