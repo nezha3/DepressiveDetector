@@ -156,10 +156,13 @@ class DetailViewController: UIViewController{
             retrieveTwitter(twitterId:  (currentChild?.twitterUserID)!,sinceId: "\( (currentChild?.twitterSinceID)!)")
         }
         
+        //set mood panel
+        configureMoodPanel()
+        
         //draw the charts
         drawChart()
         
-        //set mood panel
+        //set mood panel again after retrieve new twitter posts
         configureMoodPanel()
     }
     
