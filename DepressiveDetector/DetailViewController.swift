@@ -164,6 +164,10 @@ class DetailViewController: UIViewController{
         
         //set mood panel again after retrieve new twitter posts
         configureMoodPanel()
+        
+        //draw the charts with changes
+        drawChart()
+        
     }
     
     //Transition Display
