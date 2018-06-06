@@ -5,20 +5,20 @@ Depressive Detector is an iOS App for sentiment analysis of children's tweets. I
 This app was programmed in Swift. Only Foundation, Data Core, UIKit Apple libraries were used. Alamofire and SwiftyJSON from CocoaPods were imported to easily launch Get/Post HTTP requests to Twitter API and Google ML Engine. In the visualisation, partial codes from Nguyen Vu Nhat Minh's beautiful bar chart were merged into this app to display bar charts. The structure of this app is simple and focused on TableView. The coding hence can be easily varied to suit a commercial product.
 
 ## Launch Screen
-![Preview](https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/launch.png | width=300)
+<img src="https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/launch.png" width="200">
 
 ## Child Panel:
-![Preview](https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/childpanel.png | width=300)
+<img src="https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/childpanel.png" width="200">
 
 
 ## Display of Sentiment Analysis:
-![Preview](https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/mood1.png | width=300)
-![Preview](https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/mood2.png | width=300)
+<img src="https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/mood1.png" width="200">
+<img src="https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/mood2.png" width="200">
 
 
 ## Functionality to add new child:
-![Preview](https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/addnewchild1.png | width=300)
-![Preview](https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/addnewchild2.png | width=300)
+<img src="https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/addnewchild1.png" width="200">
+<img src="https://cdn.rawgit.com/nezha3/DepressiveDetector/master/image/addnewchild2.png" width="200">
 
 
 ## Future Works
