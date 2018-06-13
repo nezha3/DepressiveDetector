@@ -283,7 +283,7 @@ class DetailViewController: UIViewController{
     //Google ML Cloud Service Access Token Set and Get Risks from Google Analysis
     func gcRequest(text : String, since_id : String, create_date : String) {
         //Google ML Cloud Service Access Token
-        let urlAuthen = "https://language.googleapis.com/v1/documents:analyzeSentiment?key=AIzaSyAGwAOOPRKjSDxQZj4WJUhYM8zHTElywjI";
+        let urlAuthen = "https://language.googleapis.com/v1/documents:analyzeSentiment?key=??????????";//please put your key for your Google Cloud Account instead
         
         //Parameters for Post Message
         let parameters: Parameters = [
@@ -334,7 +334,7 @@ class DetailViewController: UIViewController{
     func retrieveTwitter(twitterId:String,sinceId:String?) {
         //Set Twitter APP Access Token
         let customerKey = "ZfyJo2mBTk1ZZELJRe7soNAyz"
-        let customerSecret = "fOuA7PwFBrU64zX0ahlu7wiFPzXmN3xaHJFENAC0wVu71VZFrd"
+        let customerSecret = "??????????????????" // Please instead of your secret from Twitter API
         
         //Set Parameters
         let keyValue = "\(customerKey):\(customerSecret)"
